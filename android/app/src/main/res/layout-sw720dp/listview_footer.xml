@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:padding="10dp"
+    android:background="@color/colorGreen"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/create_bill"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/rounded_button"
+            android:text="@string/create_bill_btn"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="0dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="290dp"
+            android:text="@string/total"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/total"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="290dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="400dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textAlignment="textStart"
+            android:gravity="start"
+            android:id="@+id/footer"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="400dp" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="580dp"
+            android:textAlignment="center"
+            android:background="@drawable/rounded_button"
+            android:text="@string/cancel"
+            android:textSize="30sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="580dp" />
+
+    </RelativeLayout>
+</LinearLayout>

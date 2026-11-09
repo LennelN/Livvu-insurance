@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    android:background="@color/colorGreen"
+    android:gravity="center"
+    >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_centerHorizontal="true"
+                />
+
+            <EditText
+                android:id="@+id/etMenuChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWelcomeMsg"
+                android:textSize="30sp"
+                android:layout_marginTop="50dp"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:ems="20"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:id="@+id/tvSelectCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/etMenuChoice"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:text="@string/select_country"
+                />
+
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/country_Name"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/colorBlack"
+                android:spinnerMode="dropdown"
+                android:layout_below="@id/tvSelectCountry"
+
+                />
+
+
+            <TextView
+                android:id="@+id/tvSendHere"
+                    android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/country_Name"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="420dp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="30sp"
+                android:textColor="@color/colorCell"
+                android:layout_marginBottom="50dp"
+                android:enabled="false"
+                android:text="@string/send" />
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/country_Name"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="30sp"
+                android:layout_marginBottom="50dp"
+                android:textStyle="normal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/cancel" />
+
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

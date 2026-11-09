@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sPurchaseDate"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:text="@string/date"
+            android:layout_marginStart="0dp"
+            android:padding="1dp"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:id = "@+id/sTransactionType"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:text="@string/type"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+            android:padding="1dp"
+            android:layout_marginStart="160dp"
+             />
+
+        <TextView
+            android:id = "@+id/sTransactionNo"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:text="@string/ph_no"
+            android:layout_marginStart="340dp"
+            android:textColor="@color/colorBlack"
+            android:padding="2dp"
+            android:textSize="30sp"
+            />
+
+
+        <TextView
+            android:id = "@+id/sAmount"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart="580dp"
+            android:padding="2dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:text="@string/debit"
+            android:gravity="center"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

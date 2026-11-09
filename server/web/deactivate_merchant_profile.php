@@ -1,0 +1,115 @@
+<?php
+    
+
+session_start();
+$response = array();
+$response_back = array();
+$file_name='deactivate_merchant_profile';
+require_once("./include/membersite_config.php");
+include("./include/functions.php");
+
+	$username = $_SESSION["user_name"];
+ 
+	$user_deactivated_id = $_POST["user_deactivated_id"];
+ 
+   	$reason_deactivated = $_POST["reason_deactivated"];
+	$merchant_country_deactivated = $_POST["merchant_country_deactivated"];
+
+	date_default_timezone_set('Africa/Harare');
+	$time_deactivated = date('H:i:s');
+
+	require_once __DIR__ . '/db_config.php';
+	$db = new PDO(DB_SERVER, DB_USER,DB_PASSWORD);
+    // set the PDO error mode to exception
+    	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    	//$db = new DB_CONNECT();
+
+	$sql= "SELECT merchant_code,merchant_name FROM tbl_merchant_details WHERE merchant_phone_number = :field_val AND merchant_country = :field_val1"; 
+					$stmt = $db->prepare($sql);
+					$stmt->bindParam(':field_val', $user_deactivated_id, PDO::PARAM_STR); 
+					$stmt->bindParam(':field_val1', $merchant_country_deactivated, PDO::PARAM_STR); 
+					$stmt->execute();
+					$total = $stmt->rowCount();
+					
+					if($total > 0){
+
+						$result_details = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+    						foreach($result_details as $row)
+						{
+							$merchant_code=$row['merchant_code'];
+							$merchant_name=$row['merchant_name'];
+						}
+							  
+						$db->beginTransaction();
+
+					
+						try
+						{
+
+							$dt   = new DateTime();
+							//$date_paid_out = $dt->createFromFormat('d/m/Y', $deactivated_date);
+							//$newDate = $date_paid_out->format('Y-m-d');
+							$todayDate = date('Y-m-d');
+					
+							$sql = "UPDATE tbl_merchant_details SET status_flag = 'N' WHERE merchant_phone_number = :field_val AND merchant_country = :field_val1";
+							$stmt = $db->prepare($sql);
+							$stmt->bindParam(':field_val', $user_deactivated_id, PDO::PARAM_STR);
+							$stmt->bindParam(':field_val1', $merchant_country_deactivated, PDO::PARAM_STR); 
+							// execute the query
+							$stmt->execute();
+							$total_update =  $stmt->rowCount();
+							if($total_update > 0 )//update 1 after
+							{
+
+								$stmt = $db->prepare("INSERT INTO tbl_merchant_deactivation_details(merchant_phone_number, merchant_name, merchant_code, date_deactivated,time_deactivated,reason_deactivated,user_deactivated_by,merchant_country) VALUES (:merchant_phone_number, :merchant_name, :merchant_code, :date_deactivated, :time_deactivated, :reason_deactivated, :user_deactivated_by,:merchant_country)");
+
+								$stmt->bindParam(':merchant_phone_number', $user_deactivated_id);
+								$stmt->bindParam(':merchant_name', $merchant_name);
+								$stmt->bindParam(':merchant_code', $merchant_code);
+								$stmt->bindParam(':date_deactivated', $todayDate);
+								$stmt->bindParam(':time_deactivated', $time_deactivated);
+								$stmt->bindParam(':reason_deactivated', $reason_deactivated);
+								$stmt->bindParam(':user_deactivated_by', $username);
+								$stmt->bindParam(':merchant_country', $merchant_country_deactivated);
+										
+								$stmt->execute();
+								$total =  $stmt->rowCount();
+	
+								if($total > 0){
+									$success = "true";
+									$message = "You Have Successfully Deactivated Merchant Phone Number.".$user_deactivated_id." Thank You.";
+									$_SESSION["message_create"]=$message;
+									$db->commit();
+									return true;
+								}
+							}
+							
+						}catch(PDOException $e){
+					
+								if ($e->errorInfo[1] == 1062) 
+									{
+										$success = "false";
+		 								$message = "An Error Occurred Processing Transaction. Please Try Again Later";
+										$error_message=$e->getMessage();
+		 								$_SESSION["message_create"]=$message;
+										$db->rollBack();
+										return false;
+									}else{
+										$success = "false";
+		 								$message = "An Error Occurred Processing Transaction. Please Try Again Later";
+		 								$error_message=$e->getMessage();
+		 								$_SESSION["message_create"]=$error_message;
+										$db->rollBack();
+										return false;
+									}
+						}//catch
+			}else{
+								$success = "false";
+								$message = "Merchant Phone Number .".$user_deactivated_id." Does Not Exist In The System. Please Check Merchant Phone Number.";
+								$_SESSION["message_create"]=$message;
+								return false;
+
+			}				
+
+?>

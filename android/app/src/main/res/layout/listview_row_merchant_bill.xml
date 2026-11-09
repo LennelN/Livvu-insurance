@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sBillDate"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:padding="3dp"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="0dp"
+            />
+
+        <TextView
+            android:id = "@+id/sMerchantName"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/colorBlack"
+            android:padding="3dp"
+            android:textSize="12sp"
+            android:layout_marginLeft="50dp"
+            />
+
+
+        <TextView
+            android:id = "@+id/totalPrice"
+            android:layout_width = "50dp"
+            android:layout_height = "match_parent"
+            android:layout_marginStart="100dp"
+            android:textColor="@color/colorBlack"
+            android:padding="3dp"
+            android:text="jjjj"
+            android:textSize="12sp"
+            android:layout_marginLeft="100dp" />
+
+        <TextView
+            android:id = "@+id/noOfPoints"
+            android:layout_width = "40dp"
+            android:layout_height = "match_parent"
+            android:padding="3dp"
+            android:gravity="center"
+            android:text="kkkkkk"
+            android:layout_marginStart="150dp"
+            android:textColor="@color/colorBlack"
+            android:hint="@string/points"
+            android:textSize="12sp"
+            android:layout_marginLeft="150dp" />
+
+        <TextView
+            android:id = "@+id/noOfDays"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="llllll"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="190dp"
+            android:hint="@string/no_of_days"
+            android:textSize="12sp"
+            android:layout_marginLeft="190dp" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

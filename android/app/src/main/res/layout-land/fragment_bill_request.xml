@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                android:text="@string/select_billing_institution_form"
+               />
+
+
+
+            <TextView
+                android:id="@+id/select_country"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/select_country2"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/country_Name"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true"
+                android:spinnerMode="dropdown"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:layout_toEndOf="@id/select_country"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/select_country" />
+
+            <TextView
+                android:id="@+id/etRegion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/country_Name"
+                android:layout_marginTop="20dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:text="@string/merchant_region2"
+                android:layout_alignParentLeft="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/region_desc"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true"
+                android:spinnerMode="dropdown"
+                android:backgroundTint="@color/colorBlack"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusDown="@id/etPhoneNumber"
+                android:layout_below="@id/country_Name"
+                android:layout_toEndOf="@id/etRegion"
+                />
+
+            <TextView
+                android:id="@+id/etHospital"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etRegion"
+                android:layout_marginTop="20dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:text="@string/hospital_institution"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/hospital_desc"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true"
+                android:spinnerMode="dropdown"
+                android:backgroundTint="@color/colorBlack"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_below="@id/etRegion"
+                android:layout_toEndOf="@id/etHospital"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hospital_desc"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="20dp"
+                android:textStyle="normal"
+                android:text="@string/cancel"
+                android:layout_marginLeft="30dp" />
+
+            <TextView
+                android:id="@+id/tvRegisterHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hospital_desc"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/colorBlack"
+                android:text="@string/register"
+                android:layout_marginLeft="190dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

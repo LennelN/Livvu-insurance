@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="50dp"
+    android:layout_gravity="center"
+    android:background="@color/colorGreen"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/relativeLayout1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="50dp"
+            android:gravity="center"
+            >
+
+
+
+        <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:text="@string/activate_user_form"
+                />
+
+
+
+            <TextView
+                android:id="@+id/tvUserLoginID"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/user_login_id"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="80dp"
+                android:textSize="30sp"
+                />
+
+            <EditText
+                android:id="@+id/etUserLoginID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_toRightOf="@id/tvUserLoginID"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="80dp"
+                android:textSize="30sp"
+                android:layout_marginStart="10dp"
+                android:textColorHint="@color/colorBlack"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvUserLoginID" />
+
+            <TextView
+                android:id="@+id/select_country"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/select_country"
+                android:textColor="@color/colorBlack"
+                android:layout_below="@id/etUserLoginID"
+                android:layout_marginTop="30dp"
+                android:textSize="30sp"
+                android:layout_alignParentStart="true"
+                />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/country_Name"
+                android:layout_height="100dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/colorBlack"
+                android:spinnerMode="dropdown"
+                android:layout_below="@id/etUserLoginID"
+                android:layout_toEndOf="@id/select_country"
+                />
+
+
+
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/country_Name"
+                android:layout_marginStart="380dp"
+                android:layout_marginLeft="380dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/rounded_button"
+                android:enabled="false"
+                android:text="@string/send"
+                android:textSize="30sp"
+                android:textColor="@color/colorCell" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@id/country_Name"
+                android:text="@string/cancel"
+                android:textSize="30sp"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+
+                />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

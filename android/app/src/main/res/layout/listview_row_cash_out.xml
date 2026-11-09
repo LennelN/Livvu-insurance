@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+    <TextView
+        android:id = "@+id/sBillDate"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/righhh"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="0dp"
+        android:padding="1dp"
+        android:textSize="12sp"
+         />
+
+
+        <TextView
+            android:id = "@+id/sTransactionNo"
+            android:layout_width = "80dp"
+            android:layout_height = "wrap_content"
+            android:padding="1dp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="70dp"
+            android:textSize="12sp"
+             />
+
+
+        <TextView
+            android:id="@+id/noOfPoints"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:hint="@string/points"
+            android:padding="1dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id = "@+id/noOfDays"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:gravity="center"
+            android:padding="1dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="190dp"
+            android:hint="@string/no_of_days"
+            android:textSize="12sp"
+             />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

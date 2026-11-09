@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@color/colorGreen"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+
+        <TextView
+                    android:id="@+id/tvWelcomeMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="@string/admin_reports"
+                    android:textColor="@color/colorBlack"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvMainMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="18sp"
+                    android:layout_marginTop="60dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/tvWelcomeMsg"
+                    android:text="@string/please_select"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/_1_patient_status"
+                    android:layout_below="@+id/tvMainMenu"
+                    android:layout_alignStart="@+id/tvWelcomeMsg"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignLeft="@+id/tvWelcomeMsg"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentLeft="true" />
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/_1_patient_detailed_medical_report"
+                    android:layout_below="@+id/textView1"
+                    android:layout_alignStart="@+id/textView1"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignLeft="@+id/textView1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/_2_patient_summary_medical_report"
+                    android:layout_below="@+id/textView2"
+                    android:layout_alignStart="@+id/textView2"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignLeft="@+id/textView2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentLeft="true" />
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/_3_view_patient_bills_report"
+                    android:layout_below="@+id/textView3"
+                    android:layout_alignStart="@+id/textView3"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/_5_patient_medical_history_report"
+                    android:layout_below="@+id/textView4"
+                    android:layout_alignStart="@+id/textView4"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignLeft="@+id/textView4"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentLeft="true" />
+
+
+
+                <EditText
+                    android:id="@+id/etMenuChoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView5"
+                    android:textSize="18sp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/colorBlack"
+                    android:ems="20"
+                    android:importantForAutofill="no"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/tvSendHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etMenuChoice"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginLeft="280dp"
+                    android:textSize="18sp"
+                    android:enabled="false"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/colorCell"
+                    android:text="@string/send"
+                     />
+
+                <TextView
+                    android:id="@+id/tvCancelHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etMenuChoice"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textStyle="normal"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/cancel"
+                     />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        </ScrollView>
+</RelativeLayout>

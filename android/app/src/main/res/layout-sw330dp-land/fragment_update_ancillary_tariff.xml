@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:text="@string/update_tariff_code_form"
+                />
+
+
+            <TextView
+                android:id="@+id/tvTariffCode"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/tariff_code"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/etTariffCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:focusable="false"
+                android:layout_toRightOf="@id/tvTariffCode"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textColorHint="@color/colorBlack"
+                android:textColor="@color/colorBlack"
+                android:longClickable="false"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_marginLeft="130dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvTariffCode" />
+
+            <TextView
+                android:id="@+id/tvTariffDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/description"
+                android:layout_below="@id/tvTariffCode"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="25dp"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/etTariffDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_toRightOf="@id/tvTariffDescription"
+                android:inputType="textCapWords"
+                android:layout_below="@id/etTariffCode"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:textColorHint="@color/colorBlack"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_marginLeft="130dp"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvTariffDescription" />
+
+            <TextView
+                android:id="@+id/tvTariffPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/price"
+                android:layout_below="@id/tvTariffDescription"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/etTariffPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:layout_toRightOf="@id/tvTariffPrice"
+                android:layout_below="@id/etTariffDescription"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textColorHint="@color/colorBlack"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_marginLeft="130dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvTariffPrice" />
+
+            <TextView
+                android:id="@+id/tvTariffCategory"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/category"
+                android:layout_below="@id/tvTariffPrice"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/etTariffCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="0dp"
+                android:inputType="textCapWords"
+                android:layout_toRightOf="@id/tvTariffCategory"
+                android:layout_below="@id/etTariffPrice"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:textColorHint="@color/colorBlack"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_marginLeft="130dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvTariffCategory" />
+
+            <TextView
+                android:id="@+id/tvTariffType"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/type"
+                android:layout_below="@id/tvTariffCategory"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/etTariffType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:inputType="textCapWords"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@id/tvTariffType"
+                android:layout_below="@id/etTariffCategory"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:textColorHint="@color/colorBlack"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_marginLeft="130dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvTariffType" />
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etTariffType"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="180dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal"
+                android:text="@string/cancel"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+               />
+
+            <TextView
+                android:id="@+id/tvSendHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etTariffType"
+                android:layout_marginStart="440dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/update"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                 />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

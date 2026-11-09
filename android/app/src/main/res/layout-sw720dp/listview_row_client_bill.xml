@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+    <TextView
+        android:id = "@+id/sBillDate"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:text="@string/date"
+        android:layout_marginStart="0dp"
+        android:padding="3dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp"
+        android:layout_marginLeft="0dp"
+         />
+
+    <TextView
+        android:id = "@+id/sMerchantName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:layout_marginStart="180dp"
+        android:padding="3dp"
+        android:textSize="30sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="180dp"
+        />
+
+    <TextView
+        android:id = "@+id/sCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/code"
+        android:textSize="30sp"
+        android:padding="3dp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="350dp"
+        android:layout_marginLeft="350dp" />
+
+
+        <TextView
+            android:id = "@+id/totalPrice"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart="500dp"
+            android:padding="3dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:text="@string/bill_no"
+            android:layout_marginLeft="500dp"
+            />
+
+    <TextView
+        android:id = "@+id/noOfPoints"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:padding="3dp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="620dp"
+        android:hint="@string/points"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_marginLeft="620dp"  />
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

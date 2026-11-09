@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@color/colorGreen"
+    android:focusable="true"
+    android:padding="10dp"
+    android:focusableInTouchMode="true"
+    android:id="@+id/relativeLayout1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+        <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:text="@string/activate_doctor_form"
+                 />
+
+
+
+            <TextView
+                android:id="@+id/tvDoctorPhone"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:text="@string/select_doctor_phone_no"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                />
+
+            <Spinner
+                android:id="@+id/etDoctorPhone"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/tvDoctorPhone"
+                android:backgroundTint="@color/colorBlack"
+                android:spinnerMode="dropdown" />
+
+
+            
+            <TextView
+                android:id="@+id/tvDoctorName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/doctors_name"
+                android:layout_below="@id/etDoctorPhone"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="50dp"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/etDoctorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:enabled="false"
+                android:inputType="textCapCharacters"
+                android:textSize="16sp"
+                android:layout_below="@id/etDoctorPhone"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="10dp"
+                android:textColorHint="@color/colorBlack"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvDoctorName" />
+
+
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etDoctorName"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_button"
+                android:enabled="false"
+                android:text="@string/send"
+                android:textColor="@color/colorCell"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_below="@id/etDoctorName"
+                android:text="@string/cancel"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                 />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sBillDate"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="0dp"
+            android:padding="3dp"
+            android:textSize="12sp"
+            android:layout_marginLeft="0dp" />
+
+
+        <TextView
+            android:id = "@+id/sMerchantName"
+            android:layout_width = "100dp"
+            android:layout_height = "wrap_content"
+            android:padding="3dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="70dp"
+            android:hint="@string/name"
+            android:textSize="12sp"
+            android:layout_marginLeft="70dp" />
+
+
+        <TextView
+            android:id = "@+id/sBillNo"
+            android:layout_width = "60dp"
+            android:layout_height = "wrap_content"
+            android:padding="3dp"
+            android:layout_marginStart="170dp"
+            android:hint="@string/bill_no"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="170dp" />
+
+        <TextView
+            android:id = "@+id/sAmount"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:padding="3dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="240dp"
+            android:hint="@string/amount"
+            android:textSize="12sp"
+            android:layout_marginLeft="240dp" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

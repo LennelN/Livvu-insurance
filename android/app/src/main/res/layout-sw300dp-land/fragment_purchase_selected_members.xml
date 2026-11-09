@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorGreen"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="@string/enter_phone_numbers_to_purchase_points"
+                />
+
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:backgroundTint="@color/colorBlack"
+                android:inputType="phone"
+                android:textColorHint="@color/colorBlack"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="30dp"
+                android:hint="@string/enter_phone_number"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:id="@+id/select_country"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/select_country"
+                android:textColor="@color/colorBlack"
+                android:layout_below="@id/etPhone"
+                android:layout_marginTop="0dp"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true"
+                />
+
+            <Spinner
+                android:id="@+id/country_Name"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/etPhone"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@id/select_country"
+                android:backgroundTint="@color/colorBlack"
+                android:spinnerMode="dropdown" />
+
+
+
+            <Button
+                android:id="@+id/add_phone"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_below="@id/etPhone"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/rounded_button"
+                android:text="@string/add"
+                android:enabled="false"
+                android:layout_toEndOf="@id/country_Name" />
+
+
+            <LinearLayout
+                android:id="@+id/ly_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@color/colorAccent"
+                android:layout_below="@id/add_phone">
+                <include layout="@layout/listview_header_members"/>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:layout_below="@id/ly_header"
+                >
+            </ListView>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+
+        <TextView
+            android:padding="0dp"
+            android:layout_width="40dp"
+            android:gravity="start"
+            android:textSize="12sp"
+            android:text="@string/code"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginStart="0dp"
+            />
+
+
+        <TextView
+            android:layout_width="25dp"
+            android:textSize="12sp"
+            android:gravity="start"
+            android:layout_marginStart="0dp"
+            android:padding="0dp"
+            android:text="@string/num"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            />
+
+
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_column="2"
+            android:gravity="start"
+            android:textSize="12sp"
+            android:padding="0dp"
+            android:layout_marginStart="0dp"
+            android:text="@string/description"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        <TextView
+            android:padding="0dp"
+            android:gravity="start"
+            android:textSize="12sp"
+            android:layout_marginStart="0dp"
+            android:layout_width="40dp"
+            android:text="@string/price"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:padding="0dp"
+            android:gravity="start"
+            android:textSize="12sp"
+            android:layout_marginStart="0dp"
+            android:text="@string/total"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+</TableRow>

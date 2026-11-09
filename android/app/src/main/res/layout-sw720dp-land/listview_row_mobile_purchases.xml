@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+    <TextView
+        android:id = "@+id/sPurchaseDate"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="20dp"
+        android:padding="3dp"
+        android:text="@string/date"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_marginLeft="20dp" />
+
+
+        <TextView
+            android:id = "@+id/sPhoneNo"
+            android:layout_width = "200dp"
+            android:layout_height = "wrap_content"
+            android:padding="3dp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="330dp"
+            android:textSize="30sp"
+            android:layout_marginLeft="330dp" />
+
+
+        <TextView
+        android:id = "@+id/sPurchaseAmt"
+        android:layout_width = "200dp"
+        android:layout_height = "wrap_content"
+        android:padding="3dp"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="670dp"
+        android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="670dp" />
+
+
+        <TextView
+            android:id = "@+id/noOfDays"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="920dp"
+            android:textSize="30sp"
+            android:layout_marginLeft="920dp" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

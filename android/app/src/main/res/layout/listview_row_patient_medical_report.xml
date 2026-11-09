@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sBillDate"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:textColor="@color/colorBlack"
+            android:padding="1dp"
+            android:textSize="12sp"
+            android:layout_marginLeft="0dp"
+            />
+
+
+        <TextView
+            android:id = "@+id/sCode"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            android:padding="1dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp" />
+
+        <TextView
+            android:id = "@+id/sDescription"
+            android:layout_width = "80dp"
+            android:layout_height = "wrap_content"
+            android:padding="1dp"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            />
+
+        <TextView
+            android:id = "@+id/sNo"
+            android:layout_width = "30dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart="160dp"
+            android:textColor="@color/colorBlack"
+            android:padding="1dp"
+            android:textSize="12sp"
+            android:layout_marginLeft="160dp" />
+
+        <TextView
+            android:id = "@+id/sDoctor"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:padding="1dp"
+            android:layout_marginStart="190dp"
+            android:textColor="@color/colorBlack"
+            android:hint="@string/total"
+            android:textSize="12sp"
+            android:layout_marginLeft="190dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

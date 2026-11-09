@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sRegion"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id = "@+id/sCountry"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="280dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="280dp"
+            />
+
+
+        <TextView
+        android:id = "@+id/sCategory"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="540dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorBlack"
+        android:padding="3dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="540dp"
+         />
+
+    <TextView
+        android:id = "@+id/sNo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="760dp"
+        android:padding="3dp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="760dp"
+        />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

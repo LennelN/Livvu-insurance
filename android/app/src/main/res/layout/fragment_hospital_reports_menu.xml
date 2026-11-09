@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    tools:context=".CompanyMainMenuFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorWhite"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvWelcomeMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvMainMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="12sp"
+                    android:layout_marginTop="40dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="5dp"
+                    android:layout_below="@+id/tvWelcomeMsg"
+                    android:text="@string/please_select"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp" />
+
+
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tvMainMenu"
+                    android:layout_below="@+id/tvMainMenu"
+                    android:textSize="12sp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_1_points_payment_schedule_country"
+                    android:layout_alignLeft="@+id/tvMainMenu" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView9"
+                    android:layout_below="@+id/textView9"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_2_points_payment_schedule_continent"
+                    android:layout_alignLeft="@+id/textView9" />
+
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView10"
+                    android:layout_below="@+id/textView10"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_3_hospital_demographic_count_country"
+                    android:layout_alignLeft="@+id/textView10" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView11"
+                    android:layout_below="@+id/textView11"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_4_hospital_demographic_count_continent"
+                    android:layout_alignLeft="@+id/textView11" />
+
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView12"
+                    android:layout_below="@+id/textView12"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_5_hospital_demographic_count_countryregion"
+                    android:layout_alignLeft="@+id/textView12" />
+
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView13"
+                    android:layout_below="@+id/textView13"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_8_number_of_admissions_per_month_report_country"
+                    android:layout_alignLeft="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView16"
+                    android:layout_below="@+id/textView16"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_9_number_of_patients_attended_per_month_report_country"
+                    android:layout_alignLeft="@+id/textView16" />
+
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView17"
+                    android:layout_below="@+id/textView17"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_10_number_of_admissions_per_month_report_continent"
+                    android:layout_alignLeft="@+id/textView17" />
+
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView18"
+                    android:layout_below="@+id/textView18"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_11_number_of_patients_attended_per_month_report_continent"
+                    android:layout_alignLeft="@+id/textView18" />
+
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView19"
+                    android:layout_below="@+id/textView19"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_10_cost_of_medicines_per_month_report_country"
+                    android:layout_alignLeft="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView20"
+                    android:layout_below="@+id/textView20"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_11_cost_of_medicines_code_per_month_report_continent"
+                    android:layout_alignLeft="@+id/textView20" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView21"
+                    android:layout_below="@+id/textView21"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_12_cost_of_tariff_code_per_month_report_country"
+                    android:layout_alignLeft="@+id/textView21" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView22"
+                    android:layout_below="@+id/textView22"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/_13_cost_of_tariff_code_per_month_report_continent"
+                    android:layout_alignLeft="@+id/textView22" />
+
+
+
+                <EditText
+                    android:id="@+id/etMenuChoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView23"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:ems="20"
+	                android:importantForAutofill="no"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/tvSendHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etMenuChoice"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="125dp"
+                    android:textSize="12sp"
+                    android:enabled="false"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/colorCell"
+                    android:text="@string/send"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="125dp" />
+
+                <TextView
+                    android:id="@+id/tvCancelHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etMenuChoice"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="normal"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/cancel"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+</RelativeLayout>

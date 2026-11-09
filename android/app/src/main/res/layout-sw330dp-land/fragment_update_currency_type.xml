@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="@string/update_currency_type_form"
+                android:layout_marginLeft="0dp" />
+
+
+
+            <TextView
+                android:id="@+id/tvCurrencyName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/enter_currency_name_label"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/etCurrencyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentRight="false"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:inputType="textCapWords"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/tvCurrencyName"
+                android:textColorHint="@color/colorBlack"
+                android:layout_alignParentEnd="false"
+                android:layout_toEndOf="@+id/tvCurrencyName"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp" />
+
+
+            <TextView
+                android:id="@+id/tvCurrencyCode"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/enter_currency_code_label"
+                android:layout_below="@id/etCurrencyName"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/etCurrencyCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="false"
+                android:inputType="textCapCharacters"
+                android:layout_below="@id/etCurrencyName"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/tvCurrencyCode"
+                android:layout_toEndOf="@id/tvCurrencyCode"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tvCurrencySymbol"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/enter_currency_symbol_label"
+                android:layout_below="@id/etCurrencyCode"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                />
+
+            <EditText
+                android:id="@+id/etCurrencySymbol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_below="@id/etCurrencyCode"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:orientation="horizontal"
+                android:nextFocusDown="@id/tvSendHere"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@id/tvCurrencySymbol"
+                android:layout_toEndOf="@id/tvCurrencySymbol"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                />
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCurrencySymbol"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="180dp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal"
+                android:layout_marginBottom="20dp"
+                android:text="@string/cancel"
+                 />
+
+            <TextView
+                android:id="@+id/tvSendHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCurrencySymbol"
+                android:layout_marginStart="440dp"
+                android:layout_marginTop="30dp"
+                android:enabled="false"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_button"
+                android:text="@string/send"
+                android:textColor="@color/colorCell"
+                android:textSize="16sp"
+                />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

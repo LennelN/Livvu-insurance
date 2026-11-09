@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BankingDetailsFragment"
+    android:background="@color/colorGreen"
+    android:gravity="center"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/enter_banking_details_menu"
+               />
+
+
+            <EditText
+                android:id="@+id/etBankName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="130dp"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="textCapWords"
+                android:textSize="18sp"
+                android:hint="@string/name_of_bank"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etBankAccNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:layout_below="@id/etBankName"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:hint="@string/bank_acc_no"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etBankBranch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etBankAccNo"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:inputType="textCapWords"
+                android:textSize="18sp"
+                android:hint="@string/bank_branch"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etBankAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etBankBranch"
+                android:textSize="18sp"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:inputType="textCapWords"
+                android:hint="@string/bank_address"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etBankAddress"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="60dp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="18sp"
+                android:layout_marginBottom="50dp"
+                android:text="@string/cancel"
+                 />
+
+            <TextView
+                android:id="@+id/tvSendHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etBankAddress"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:layout_marginStart="280dp"
+                android:textColor="@color/colorCell"
+                android:layout_marginTop="50dp"
+                android:textSize="18sp"
+                android:enabled="false"
+                android:layout_marginBottom="50dp"
+                android:text="@string/send"
+               />
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorWhite"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvWelcomeMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="bold"
+                    android:text="@string/registration_terms_indiv"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    android:layout_below="@id/tvWelcomeMsg"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/accept"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_below="@id/textView"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/terms_society"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/tvAccept"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="125dp"
+                    android:layout_marginLeft="125dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="12sp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:layout_below="@id/textView1"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="@string/accept_terms" />
+
+                <TextView
+                    android:id="@+id/tvDecline"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="12sp"
+                    android:layout_below="@id/textView1"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:text="@string/decline_terms" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+</RelativeLayout>

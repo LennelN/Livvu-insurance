@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreen"
+        >
+
+        <TextView
+            android:layout_width="46dp"
+            android:layout_column="0"
+            android:layout_gravity="start"
+            android:layout_span="1"
+            android:layout_marginStart="50dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="30sp"
+            android:text="@string/date"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_marginLeft="50dp" />
+
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_column="1"
+            android:layout_span="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="30sp"
+            android:layout_gravity="start"
+            android:text="@string/phone"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_column="2"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="@string/bill_no"
+            android:textSize="30sp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_gravity="start"
+            />
+
+
+        <TextView
+            android:layout_column="3"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="30sp"
+            android:text="@string/points"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_column="4"
+            android:padding="5dp"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_gravity="start"
+            android:text="@string/no_of_days"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+    </TableRow>
+
+
+</TableLayout>

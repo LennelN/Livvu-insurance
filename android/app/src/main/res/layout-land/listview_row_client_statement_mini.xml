@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+    <TextView
+        android:id = "@+id/sBillDate"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:text="@string/date"
+        android:layout_marginStart="0dp"
+        android:padding="1dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:id = "@+id/sCode"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="@string/type"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlack"
+            android:padding="1dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp" />
+
+    <TextView
+        android:id = "@+id/sMerchantName"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:text="@string/ph_no"
+        android:layout_marginStart="140dp"
+        android:textColor="@color/colorBlack"
+        android:padding="3dp"
+        android:textSize="12sp"
+        android:layout_marginLeft="140dp" />
+
+
+        <TextView
+            android:id = "@+id/noOfPoints"
+            android:layout_width = "50dp"
+            android:layout_height = "match_parent"
+            android:layout_marginStart="210dp"
+            android:padding="3dp"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:text="@string/debit"
+            android:layout_marginLeft="210dp" />
+
+    <TextView
+        android:id = "@+id/noOfPointsPaid"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:padding="3dp"
+        android:layout_marginStart="260dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:hint="@string/credit"
+        android:textSize="12sp"
+        android:layout_marginLeft="260dp" />
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

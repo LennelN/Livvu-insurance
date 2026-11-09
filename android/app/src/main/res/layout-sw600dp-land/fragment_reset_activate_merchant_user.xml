@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:padding="80dp"
+    android:layout_gravity="center"
+    android:background="@color/colorGreen"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/relativeLayout1">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:text="@string/reset_activate_user_form"
+                 />
+
+
+
+            <TextView
+                android:id="@+id/tvUserLoginID"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/user_login_id"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                />
+
+            <EditText
+                android:id="@+id/etUserLoginID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="number"
+                android:layout_toRightOf="@id/tvUserLoginID"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                android:textColorHint="@color/colorBlack"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/tvUserLoginID" />
+
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etUserLoginID"
+                android:layout_marginStart="540dp"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/rounded_button"
+                android:enabled="false"
+                android:text="@string/send"
+                android:textColor="@color/colorCell" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@id/etUserLoginID"
+                android:text="@string/cancel"
+                android:background="@drawable/rounded_button"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+
+                 />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

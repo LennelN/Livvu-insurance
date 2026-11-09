@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+    <TextView
+        android:id = "@+id/sBillDate"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:text="@string/date"
+       android:gravity="start"
+        android:layout_marginStart="0dp"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+         />
+
+        <TextView
+            android:id = "@+id/sCode"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/code"
+            android:textSize="16sp"
+            android:padding="3dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="150dp"
+             />
+
+    <TextView
+        android:id = "@+id/sMerchantName"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:text="@string/desc"
+        android:layout_marginStart="250dp"
+        android:padding="3dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+
+         />
+
+
+        <TextView
+            android:id = "@+id/noOfPoints"
+            android:layout_width = "100dp"
+            android:layout_height = "match_parent"
+            android:layout_marginStart="500dp"
+            android:padding="3dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/debit"
+             />
+
+    <TextView
+        android:id = "@+id/noOfPointsPaid"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:padding="3dp"
+        android:gravity="center"
+        android:layout_marginStart="600dp"
+        android:textColor="@color/colorBlack"
+        android:text="@string/credit"
+        android:textSize="16sp"
+        />
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

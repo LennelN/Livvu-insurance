@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+	    >
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+		android:padding="10dp">
+
+		<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="18sp"
+                android:text="@string/please_select"
+				android:textColor="#000"
+				android:id="@+id/heading"/>
+
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/heading"
+            android:id="@+id/moodRadioGroup"
+            android:padding="10dp">
+
+        <RadioButton
+            android:text="@string/pay_the_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton1"
+            android:textColor="@color/colorBlack"
+            android:checked="true"
+            android:textSize="18sp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/view_bill_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/radioButton2"
+            android:textSize="18sp"
+            android:buttonTint="@color/colorBlack"
+            android:layout_weight="1" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:background="@drawable/rounded_button"
+            android:textSize="15sp"
+            android:layout_marginStart="200dp"
+            android:textColor="@color/colorBlack"
+            android:layout_below="@id/moodRadioGroup"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/action_ok"
+            android:layout_marginLeft="200dp" />
+
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_below="@id/moodRadioGroup"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:background="@drawable/rounded_button"
+            android:textSize="15sp"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/action_cancel"
+            android:layout_marginLeft="40dp" />
+
+    
+		</RelativeLayout>
+
+
+
+
+</RelativeLayout>

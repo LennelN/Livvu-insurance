@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="80dp"
+    android:background="@color/colorGreen"
+    android:gravity="center">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/colorWhite"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+                <TextView
+                    android:id="@+id/tvWelcomeMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="50dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    />
+
+                <EditText
+                    android:id="@+id/etMenuChoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvWelcomeMsg"
+                    android:textSize="20sp"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="normal"
+                    android:backgroundTint="@color/colorBlack"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:ems="20"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:id="@+id/tvSendHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etMenuChoice"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="540dp"
+                    android:textColor="@color/colorCell"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="30dp"
+                    android:enabled="false"
+                    android:text="@string/send" />
+
+                <TextView
+                    android:id="@+id/tvCancelHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etMenuChoice"
+                    android:layout_marginStart="200dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:layout_marginTop="50dp"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="30dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/cancel" />
+
+
+            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+</RelativeLayout>

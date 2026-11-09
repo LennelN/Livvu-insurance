@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/colorGreen"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/enter_phone_no"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:layout_marginLeft="300dp"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:background="@drawable/rounded_button"
+            android:text="@string/remove_phone_number"
+            android:textColor="@color/colorBlack"
+             />
+
+
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textAlignment="center"
+            android:background="@drawable/rounded_button"
+            android:text="@string/cancel"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+             />
+
+    </RelativeLayout>
+</LinearLayout>

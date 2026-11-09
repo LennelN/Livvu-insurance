@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+
+  <TextView
+
+            android:padding="3dp"
+            android:layout_width="60dp"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:text="Code"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorGreen"
+            android:textStyle="bold"
+            android:layout_marginStart="0dp"
+            />
+
+
+        <TextView
+            android:layout_width="30dp"
+            android:textSize="16sp"
+            android:gravity="start"
+            android:layout_marginStart="0dp"
+            android:padding="3sp"
+            android:text="@string/num"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorGreen"
+            android:textStyle="bold"
+             />
+
+        
+
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_column="2"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:padding="3sp"
+            android:layout_marginStart="0dp"
+            android:text="@string/description"
+            android:background="@color/colorGreen"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        <TextView
+            android:padding="3sp"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:layout_marginStart="0dp"
+            android:layout_width="50dp"
+            android:text="@string/price"
+            android:background="@color/colorGreen"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:padding="3sp"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:layout_marginStart="0dp"
+            android:text="@string/total"
+            android:background="@color/colorGreen"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+</TableRow>

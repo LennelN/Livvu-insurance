@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@color/colorGreen"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+                <TextView
+                    android:id="@+id/tvWelcomeMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="@string/merchant_account_maintenanance_form"
+                    android:textColor="@color/colorBlack"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvMainMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginStart="40dp"
+                    android:layout_below="@+id/tvWelcomeMsg"
+                    android:text="@string/please_select"
+                     />
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/_1_deactivate_merchant_account"
+                    android:layout_below="@+id/tvMainMenu"
+                    android:layout_alignStart="@+id/tvWelcomeMsg"
+                    android:layout_marginStart="40dp"
+                    android:layout_alignLeft="@+id/tvWelcomeMsg"
+                    android:layout_marginLeft="40dp"
+                    android:layout_alignParentLeft="true" />
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView2"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    android:text="@string/_2_activate_merchant_account"
+                    android:layout_alignLeft="@+id/textView2" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView3"
+                    android:layout_below="@+id/textView3"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    android:text="@string/_3_activate_reset_password"
+                    android:layout_alignLeft="@+id/textView3" />
+
+
+
+                <EditText
+                    android:id="@+id/etMenuChoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView4"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:ems="20"
+                    android:importantForAutofill="no"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/tvSendHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etMenuChoice"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="280dp"
+                    android:textSize="18sp"
+                    android:enabled="false"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@color/colorCell"
+                    android:text="@string/send"
+                    android:layout_marginBottom="40dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvCancelHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etMenuChoice"
+                    android:layout_marginStart="60dp"
+                    android:textStyle="normal"
+                    android:layout_marginTop="40dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/cancel"
+                    android:layout_marginBottom="40dp"
+                    />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,573 @@
+package com.moyet.livvuinsurance;
+
+
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.moyet.livvuinsurance.FragmentActionListener.KEY_IP_ADDRESS_SELECTED;
+
+
+public class FragmentNoOfAdmissionsMerchantCount extends Fragment {
+    private Context contextNullSafe;
+    Context context;
+    FragmentActivity activity;
+    StringRequest stringRequest;
+    StringRequest stringRequestAdapter;
+    View rootView;
+    private static final String TAG = "NoOfAdmiMerCntFrag";
+    ArrayList<NoOfAdmissionsCountryDetails> itemList;
+    ArrayList<String> listViewItems;
+    String URL;
+    ListView lv;
+    listviewNoOfAdmissionsCountryCountAdapter adapter;
+    ProgressDialog pd;
+    AlertDialog.Builder builder;
+    String category,code,bill_number,description;
+    String no_of_points,no_of_category;
+    String merchantName;
+    String  merchantCode;
+    String userName;
+    String phone_no,merchantUserName,phone_number;
+    String message;
+    Button cancel;
+    FragmentActionListener fragmentActionListener;
+    String ip,region;
+    TextView tvWelcomemsg;
+    private  int screenWidth,screenHeight;
+    String phoneNo,userRole,errorMessage,firstName,sending_frag,user_login_id,country,session_id,country_name,
+            continent_name,main_frag,report_start_date,report_end_date,reportNo,nameOfUser,user_login_key,user_role;
+
+    public FragmentNoOfAdmissionsMerchantCount() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Bundle bundle = getArguments();
+        if(bundle!=null) {
+            session_id = bundle.getString(FragmentActionListener.KEY_LOGIN_SESSION_ID);
+            sending_frag=bundle.getString(FragmentActionListener.KEY_SENDING_FRAG);
+            ip = bundle.getString(FragmentActionListener.KEY_IP_ADDRESS);
+            phone_no= bundle.getString(FragmentActionListener.KEY_PHONE_NO);
+            report_start_date= bundle.getString(FragmentActionListener.KEY_REPORT_START_DATE);
+            report_end_date= bundle.getString(FragmentActionListener.KEY_REPORT_END_DATE);
+            reportNo= bundle.getString(FragmentActionListener.KEY_REPORT_NUMBER);
+            if(sending_frag.contentEquals("companyMainMenu")) {
+                merchantName = bundle.getString(FragmentActionListener.KEY_NAME);
+                merchantCode = bundle.getString(FragmentActionListener.KEY_LAST_NAME);
+                userName = bundle.getString(FragmentActionListener.KEY_USERNAME);
+                country = bundle.getString(FragmentActionListener.KEY_LOGIN_COUNTRY);
+            }else if(sending_frag.contentEquals("MerchantMainMenuFrag")) {
+                user_login_key= bundle.getString(FragmentActionListener.KEY_LOGIN_TYPE);
+                nameOfUser = bundle.getString(FragmentActionListener.KEY_NAME);
+                phone_number = bundle.getString(FragmentActionListener.KEY_LAST_NAME);
+                nameOfUser = bundle.getString(FragmentActionListener.KEY_USERNAME);
+                user_role = bundle.getString(FragmentActionListener.KEY_USER_ROLE);
+                user_login_id = bundle.getString(FragmentActionListener.KEY_LOGIN_USER_ID);
+                country = bundle.getString(FragmentActionListener.KEY_LOGIN_COUNTRY);
+                merchantCode = bundle.getString(FragmentActionListener.KEY_MERCHANT_CODE);
+                merchantUserName = bundle.getString(FragmentActionListener.KEY_MERCHANT_USERNAME);
+                merchantName = bundle.getString(FragmentActionListener.KEY_MERCHANT_NAME);
+                userName = bundle.getString(FragmentActionListener.KEY_MERCHANT_USERNAME);
+            }
+        }
+
+    }
+
+    public void setFragmentActionListener(FragmentActionListener fragmentActionListener){
+        this.fragmentActionListener = fragmentActionListener;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (savedInstanceState != null) {
+            fragmentActionListener = (MainActivity) getActivity();
+        }
+
+        Bundle bundle = getArguments();
+        if(bundle!=null) {
+            session_id = bundle.getString(FragmentActionListener.KEY_LOGIN_SESSION_ID);
+            sending_frag=bundle.getString(FragmentActionListener.KEY_SENDING_FRAG);
+            ip = bundle.getString(FragmentActionListener.KEY_IP_ADDRESS);
+            phone_no= bundle.getString(FragmentActionListener.KEY_PHONE_NO);
+            report_start_date= bundle.getString(FragmentActionListener.KEY_REPORT_START_DATE);
+            report_end_date= bundle.getString(FragmentActionListener.KEY_REPORT_END_DATE);
+            reportNo= bundle.getString(FragmentActionListener.KEY_REPORT_NUMBER);
+            if(sending_frag.contentEquals("companyMainMenu")) {
+                merchantName = bundle.getString(FragmentActionListener.KEY_NAME);
+                merchantCode = bundle.getString(FragmentActionListener.KEY_LAST_NAME);
+                userName = bundle.getString(FragmentActionListener.KEY_USERNAME);
+                country = bundle.getString(FragmentActionListener.KEY_LOGIN_COUNTRY);
+            }else if(sending_frag.contentEquals("MerchantMainMenuFrag")) {
+                user_login_key= bundle.getString(FragmentActionListener.KEY_LOGIN_TYPE);
+                nameOfUser = bundle.getString(FragmentActionListener.KEY_NAME);
+                phone_number = bundle.getString(FragmentActionListener.KEY_LAST_NAME);
+                nameOfUser = bundle.getString(FragmentActionListener.KEY_USERNAME);
+                user_role = bundle.getString(FragmentActionListener.KEY_USER_ROLE);
+                user_login_id = bundle.getString(FragmentActionListener.KEY_LOGIN_USER_ID);
+                country = bundle.getString(FragmentActionListener.KEY_LOGIN_COUNTRY);
+                merchantCode = bundle.getString(FragmentActionListener.KEY_MERCHANT_CODE);
+                merchantUserName = bundle.getString(FragmentActionListener.KEY_MERCHANT_USERNAME);
+                merchantName = bundle.getString(FragmentActionListener.KEY_MERCHANT_NAME);
+                userName = bundle.getString(FragmentActionListener.KEY_MERCHANT_USERNAME);
+            }
+        }
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        contextNullSafe = context;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        if(stringRequestAdapter != null){
+            stringRequestAdapter.cancel();
+        }
+        if(stringRequest != null){
+            stringRequest.cancel();
+        }
+
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        if (contextNullSafe == null) getContextNullSafety();
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        Bundle bundle = getArguments();
+        if(bundle!=null) {
+            session_id = bundle.getString(FragmentActionListener.KEY_LOGIN_SESSION_ID);
+            sending_frag=bundle.getString(FragmentActionListener.KEY_SENDING_FRAG);
+            ip = bundle.getString(FragmentActionListener.KEY_IP_ADDRESS);
+            phone_no= bundle.getString(FragmentActionListener.KEY_PHONE_NO);
+            report_start_date= bundle.getString(FragmentActionListener.KEY_REPORT_START_DATE);
+            report_end_date= bundle.getString(FragmentActionListener.KEY_REPORT_END_DATE);
+            reportNo= bundle.getString(FragmentActionListener.KEY_REPORT_NUMBER);
+            if(sending_frag.contentEquals("companyMainMenu")) {
+                merchantName = bundle.getString(FragmentActionListener.KEY_NAME);
+                merchantCode = bundle.getString(FragmentActionListener.KEY_LAST_NAME);
+                userName = bundle.getString(FragmentActionListener.KEY_USERNAME);
+                country = bundle.getString(FragmentActionListener.KEY_LOGIN_COUNTRY);
+            }else if(sending_frag.contentEquals("MerchantMainMenuFrag")) {
+                user_login_key= bundle.getString(FragmentActionListener.KEY_LOGIN_TYPE);
+                nameOfUser = bundle.getString(FragmentActionListener.KEY_NAME);
+                phone_number = bundle.getString(FragmentActionListener.KEY_LAST_NAME);
+                nameOfUser = bundle.getString(FragmentActionListener.KEY_USERNAME);
+                user_role = bundle.getString(FragmentActionListener.KEY_USER_ROLE);
+                user_login_id = bundle.getString(FragmentActionListener.KEY_LOGIN_USER_ID);
+                country = bundle.getString(FragmentActionListener.KEY_LOGIN_COUNTRY);
+                merchantCode = bundle.getString(FragmentActionListener.KEY_MERCHANT_CODE);
+                merchantUserName = bundle.getString(FragmentActionListener.KEY_MERCHANT_USERNAME);
+                merchantName = bundle.getString(FragmentActionListener.KEY_MERCHANT_NAME);
+                userName = bundle.getString(FragmentActionListener.KEY_MERCHANT_USERNAME);
+            }
+        }
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        screenWidth = displayMetrics.widthPixels;
+        screenHeight = displayMetrics.heightPixels;
+
+        rootView = inflater.inflate(R.layout.fragment_no_of_admissions_country_count_report, container, false);
+        initUI();
+        return rootView;
+    }
+
+    private void initUI() {
+
+        if (getContext() != null && isAdded()){
+            context=getContext();
+        }else{
+            context=getContextNullSafety();
+        }
+        if (getActivity() != null && isAdded()){
+            activity=getActivity();
+        }else{
+            activity=getActivityNullSafety();
+        }
+
+        String server_logged_in = ip + "check_login_status.php";
+        checkLoginStatus(server_logged_in);
+        tvWelcomemsg = rootView.findViewById(R.id.tvWelcomeMsg);
+        String msg = activity.getResources().getString(R.string.no_of_admissions_report_from)+" "+report_start_date+" "+
+                activity.getResources().getString(R.string._to_space)+" "+report_end_date;
+        tvWelcomemsg.setTextColor(activity.getResources().getColor(R.color.colorBlack));
+        tvWelcomemsg.setText(msg);
+
+        lv = rootView.findViewById(R.id.list);
+        itemList = new ArrayList<NoOfAdmissionsCountryDetails>();
+        URL=ip +"get_no_of_admissions.php";
+        loadDemographicData(URL);
+        View footerView = getLayoutInflater().inflate(R.layout.listview_footer_merchant, null);
+        cancel = footerView.findViewById(R.id.cancel);
+        lv.addFooterView(footerView, null, false);
+        adapter = new listviewNoOfAdmissionsCountryCountAdapter(context, itemList);
+        lv.setAdapter(adapter);
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (fragmentActionListener != null) {
+                    if(sending_frag.contentEquals("companyMainMenu")) {
+                        Bundle bundle = new Bundle();
+                        bundle.putInt(FragmentActionListener.ACTION_KEY, 37);
+                        bundle.putString(FragmentActionListener.KEY_LOGIN_SESSION_ID, session_id);
+                        bundle.putString(FragmentActionListener.KEY_NAME, merchantName);
+                        bundle.putString(FragmentActionListener.KEY_LAST_NAME, merchantCode);
+                        bundle.putString(FragmentActionListener.KEY_USERNAME, userName);
+                        bundle.putString(FragmentActionListener.KEY_LOGIN_COUNTRY, country);
+                        bundle.putString(FragmentActionListener.KEY_IP_ADDRESS, KEY_IP_ADDRESS_SELECTED);
+                        bundle.putString(FragmentActionListener.KEY_SELECTED_FRAG, "reportsMainMenuFrag");
+                        bundle.putString(FragmentActionListener.KEY_SENDING_FRAG, sending_frag);
+                        fragmentActionListener.onActionPerformed(bundle);
+                    }else if(sending_frag.contentEquals("MerchantMainMenuFrag")) {
+                        Bundle bundle = new Bundle();
+                        bundle.putInt(FragmentActionListener.ACTION_KEY, 37);
+                        bundle.putString(FragmentActionListener.KEY_LOGIN_SESSION_ID, session_id);
+                        bundle.putString(FragmentActionListener.KEY_SELECTED_FRAG, "reportsMainMenuFrag");
+                        bundle.putString(FragmentActionListener.KEY_SENDING_FRAG, sending_frag);
+                        bundle.putString(FragmentActionListener.KEY_NAME, nameOfUser);
+                        bundle.putString(FragmentActionListener.KEY_LAST_NAME, phone_number);
+                        bundle.putString(FragmentActionListener.KEY_USERNAME, nameOfUser);
+                        bundle.putString(FragmentActionListener.KEY_USER_ROLE, user_role);
+                        bundle.putString(FragmentActionListener.KEY_LOGIN_COUNTRY, country);
+                        bundle.putString(FragmentActionListener.KEY_LOGIN_USER_ID, user_login_id);
+                        bundle.putString(FragmentActionListener.KEY_LOGIN_TYPE, "MerchantUser");
+                        bundle.putString(FragmentActionListener.KEY_MERCHANT_USERNAME, merchantUserName);
+                        bundle.putString(FragmentActionListener.KEY_MERCHANT_CODE, merchantCode);
+                        bundle.putString(FragmentActionListener.KEY_MERCHANT_NAME, merchantName);
+                        bundle.putString(FragmentActionListener.KEY_IP_ADDRESS, KEY_IP_ADDRESS_SELECTED);
+                        fragmentActionListener.onActionPerformed(bundle);
+
+                    }
+                }
+
+            }
+        });
+    }
+
+
+
+    private void loadDemographicData(String url) {
+
+        if (getContext() != null && isAdded()){
+            context=getContext();
+        }else{
+            context=getContextNullSafety();
+        }
+        if (getActivity() != null && isAdded()){
+            activity=getActivity();
+        }else{
+            activity=getActivityNullSafety();
+        }
+        if((screenWidth==240 && screenHeight==320) || (screenWidth==320 && screenHeight==240)) {
+            pd = new ProgressDialog(context, R.style.MyDialogTheme240);
+        }else if((screenWidth==240 && screenHeight==432) || (screenWidth==432 && screenHeight==240)
+                || screenWidth==720 || screenWidth==1184) {
+            pd = new ProgressDialog(context, R.style.MyDialogTheme16sp);
+        }else if(screenWidth==600 || screenWidth==1024){
+            pd = new ProgressDialog(context, R.style.MyDialogTheme600);
+        }else if((screenWidth==800 && screenHeight == 1232)|| screenWidth==1280){
+            pd = new ProgressDialog(context, R.style.MyDialogTheme720);
+        }else{
+            pd = new ProgressDialog(context, R.style.MyDialogTheme18sp);
+        }
+        pd.setMessage(activity.getResources().getString(R.string.processing_please_wait_dialog));
+        pd.show();
+        stringRequestAdapter = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+
+                    @Override
+                    public void onResponse(String response) {
+                        //JSONArray jsonArray = null;
+                        try {
+                            JSONArray jsonArray = new JSONArray(response);
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject jsonResponse = jsonArray.getJSONObject(i);
+                                boolean success = jsonResponse.getBoolean("success");
+                                String message = jsonResponse.getString("message");
+
+                                if (success) {
+                                    pd.dismiss();
+                                    code = jsonResponse.getString("tariff_code");
+                                    description = jsonResponse.getString("tariff_description");
+                                    no_of_category = jsonResponse.getString("count");
+                                    NoOfAdmissionsCountryDetails noOfAdmissionsCountryDetails = new
+                                            NoOfAdmissionsCountryDetails(code,description,no_of_category);
+                                    itemList.add(noOfAdmissionsCountryDetails);
+                                    adapter.notifyDataSetChanged();
+
+                                }else{
+                                    pd.dismiss();
+                                    if (fragmentActionListener != null) {
+                                        if(sending_frag.contentEquals("companyMainMenu")) {
+                                            Bundle bundle = new Bundle();
+                                            bundle.putInt(FragmentActionListener.ACTION_KEY, 13);
+                                            bundle.putString(FragmentActionListener.KEY_LOGIN_SESSION_ID, session_id);
+                                            bundle.putString(FragmentActionListener.KEY_MESSAGE, message);
+                                            bundle.putString(FragmentActionListener.KEY_LOGIN_COUNTRY, country);
+                                            bundle.putString(FragmentActionListener.KEY_NAME, merchantName);
+                                            bundle.putString(FragmentActionListener.KEY_LAST_NAME, merchantCode);
+                                            bundle.putString(FragmentActionListener.KEY_USERNAME, userName);
+                                            bundle.putString(FragmentActionListener.KEY_PHONE_NO, userName);
+                                            bundle.putString(FragmentActionListener.KEY_SENDING_FRAG, "NoOfAdmissionsMerchantCountFrag");
+                                            bundle.putString(FragmentActionListener.KEY_SELECTED_FRAG, "ResponseFrag");
+                                            fragmentActionListener.onActionPerformed(bundle);
+                                        }else if(sending_frag.contentEquals("MerchantMainMenuFrag")) {
+                                            Bundle bundle = new Bundle();
+                                            bundle.putInt(FragmentActionListener.ACTION_KEY, 13);
+                                            bundle.putString(FragmentActionListener.KEY_LOGIN_SESSION_ID, session_id);
+                                            bundle.putString(FragmentActionListener.KEY_MESSAGE, message);
+                                            bundle.putString(FragmentActionListener.KEY_MAIN_MENU, sending_frag);
+                                            bundle.putString(FragmentActionListener.KEY_SENDING_FRAG, sending_frag);
+                                            bundle.putString(FragmentActionListener.KEY_SELECTED_FRAG, "ResponseFrag");
+                                            bundle.putString(FragmentActionListener.KEY_NAME, nameOfUser);
+                                            bundle.putString(FragmentActionListener.KEY_LAST_NAME, phone_number);
+                                            bundle.putString(FragmentActionListener.KEY_USERNAME, nameOfUser);
+                                            bundle.putString(FragmentActionListener.KEY_USER_ROLE, user_role);
+                                            bundle.putString(FragmentActionListener.KEY_LOGIN_COUNTRY, country);
+                                            bundle.putString(FragmentActionListener.KEY_LOGIN_USER_ID, user_login_id);
+                                            bundle.putString(FragmentActionListener.KEY_LOGIN_TYPE, "MerchantUser");
+                                            bundle.putString(FragmentActionListener.KEY_MERCHANT_USERNAME, merchantUserName);
+                                            bundle.putString(FragmentActionListener.KEY_MERCHANT_CODE, merchantCode);
+                                            bundle.putString(FragmentActionListener.KEY_MERCHANT_NAME, merchantName);
+                                            bundle.putString(FragmentActionListener.KEY_IP_ADDRESS, KEY_IP_ADDRESS_SELECTED);
+                                            fragmentActionListener.onActionPerformed(bundle);
+                                        }
+                                    }
+                                }
+                            }
+                        } catch (JSONException e) {
+                            pd.dismiss();
+                            e.printStackTrace();
+                        }
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        pd.dismiss();
+                        Dialog epicDialog = null;
+
+                        if(getContext() != null && isAdded()) {
+                            epicDialog = new Dialog(getContext());
+                        }else{
+                            context = getContextNullSafety();
+                            epicDialog = new Dialog(context);
+                        }
+
+                        if (getActivity() != null && isAdded()){
+                            activity=getActivity();
+                        }else{
+                            activity=getActivityNullSafety();
+                        }
+                        epicDialog.setContentView(R.layout.dialog_my_custom_message_retry);
+                        TextView txtview = epicDialog.findViewById(R.id.message_text);
+                        TextView action_ok = epicDialog.findViewById(R.id.action_ok);
+                        txtview.setText(activity.getResources().getString(R.string.unable_to_download));
+
+                        epicDialog.show();
+                        Dialog finalEpicDialog = epicDialog;
+                        action_ok.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                finalEpicDialog.dismiss();
+                                if (fragmentActionListener != null) {
+                                    if(sending_frag.contentEquals("companyMainMenu")) {
+                                        Bundle bundle = new Bundle();
+                                        bundle.putInt(FragmentActionListener.ACTION_KEY, 37);
+                                        bundle.putString(FragmentActionListener.KEY_LOGIN_SESSION_ID, session_id);
+                                        bundle.putString(FragmentActionListener.KEY_NAME, merchantName);
+                                        bundle.putString(FragmentActionListener.KEY_LAST_NAME, merchantCode);
+                                        bundle.putString(FragmentActionListener.KEY_USERNAME, userName);
+                                        bundle.putString(FragmentActionListener.KEY_LOGIN_COUNTRY, country);
+                                        bundle.putString(FragmentActionListener.KEY_IP_ADDRESS, KEY_IP_ADDRESS_SELECTED);
+                                        bundle.putString(FragmentActionListener.KEY_SELECTED_FRAG, "reportsMainMenuFrag");
+                                        bundle.putString(FragmentActionListener.KEY_SENDING_FRAG, sending_frag);
+                                        fragmentActionListener.onActionPerformed(bundle);
+                                    }else if(sending_frag.contentEquals("MerchantMainMenuFrag")) {
+                                        Bundle bundle = new Bundle();
+                                        bundle.putInt(FragmentActionListener.ACTION_KEY, 37);
+                                        bundle.putString(FragmentActionListener.KEY_LOGIN_SESSION_ID, session_id);
+                                        bundle.putString(FragmentActionListener.KEY_SELECTED_FRAG, "reportsMainMenuFrag");
+                                        bundle.putString(FragmentActionListener.KEY_SENDING_FRAG, sending_frag);
+                                        bundle.putString(FragmentActionListener.KEY_NAME, nameOfUser);
+                                        bundle.putString(FragmentActionListener.KEY_LAST_NAME, phone_number);
+                                        bundle.putString(FragmentActionListener.KEY_USERNAME, nameOfUser);
+                                        bundle.putString(FragmentActionListener.KEY_USER_ROLE, user_role);
+                                        bundle.putString(FragmentActionListener.KEY_LOGIN_COUNTRY, country);
+                                        bundle.putString(FragmentActionListener.KEY_LOGIN_USER_ID, user_login_id);
+                                        bundle.putString(FragmentActionListener.KEY_LOGIN_TYPE, "MerchantUser");
+                                        bundle.putString(FragmentActionListener.KEY_MERCHANT_USERNAME, merchantUserName);
+                                        bundle.putString(FragmentActionListener.KEY_MERCHANT_CODE, merchantCode);
+                                        bundle.putString(FragmentActionListener.KEY_MERCHANT_NAME, merchantName);
+                                        bundle.putString(FragmentActionListener.KEY_IP_ADDRESS, KEY_IP_ADDRESS_SELECTED);
+                                        fragmentActionListener.onActionPerformed(bundle);
+
+                                    }
+                                }
+                            }
+                        });
+                        error.printStackTrace();
+                        //error.getMessage();
+                    }
+                }
+        ) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> param = new HashMap<String, String>();
+                if(sending_frag.contentEquals("companyMainMenu")) {
+                    param.put("username", userName);
+                }else {
+                    param.put("username", merchantUserName);
+                }
+                param.put("start_date", report_start_date);
+                param.put("end_date", report_end_date);
+                param.put("country", country);
+                param.put("merchant_code",merchantCode);
+                return param;
+            }
+        };
+
+        Vconnection.getnInstance(activity).addRequestQue(stringRequestAdapter);
+
+    }
+
+    private void checkLoginStatus(String server_logged_in) {
+        if (getContext() != null && isAdded()){
+            context=getContext();
+        }else{
+            context=getContextNullSafety();
+        }
+        if (getActivity() != null && isAdded()){
+            activity=getActivity();
+        }else{
+            activity=getActivityNullSafety();
+        }
+
+        stringRequest = new StringRequest(Request.Method.POST, server_logged_in,
+                new Response.Listener<String>() {
+
+                    @Override
+                    public void onResponse(String response) {
+                        //JSONArray jsonArray = null;
+                        try {
+                            JSONArray jsonArray = new JSONArray(response);
+                            JSONObject jsonResponse = jsonArray.getJSONObject(0);
+                            boolean success = jsonResponse.getBoolean("success");
+                            String message = jsonResponse.getString("message");
+
+                            if (!success) {
+                                Bundle bundle = new Bundle();
+                                bundle.putInt(FragmentActionListener.ACTION_KEY, 99);
+                                bundle.putString(FragmentActionListener.KEY_MESSAGE, message);
+                                bundle.putString(FragmentActionListener.KEY_LOGIN_SESSION_ID, session_id);
+                                bundle.putString(FragmentActionListener.KEY_SELECTED_FRAG, "ResponseLogoutSessionFrag");
+                                bundle.putString(FragmentActionListener.KEY_SENDING_FRAG, "NoOfAdmissionsMerchantCountFrag");
+                                bundle.putString(FragmentActionListener.KEY_IP_ADDRESS,KEY_IP_ADDRESS_SELECTED);
+                                fragmentActionListener.onActionPerformed(bundle);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                        String errorMessage=activity.getResources().getString(R.string.unable_to_verify_login_status_check_your_internet_connection_and_try_again);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt(FragmentActionListener.ACTION_KEY, 32);
+                        bundle.putString(FragmentActionListener.KEY_SELECTED_FRAG, "MainFragment");
+                        bundle.putString(FragmentActionListener.KEY_MESSAGE, errorMessage);
+                        bundle.putString(FragmentActionListener.KEY_LOGIN_SESSION_ID, session_id);
+                        bundle.putString(FragmentActionListener.KEY_SENDING_FRAG, "NoOfAdmissionsMerchantCountFrag");
+                        fragmentActionListener.onActionPerformed(bundle);
+                        error.printStackTrace();
+                        //error.getMessage();
+                    }
+                }
+        ) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> param = new HashMap<String, String>();
+                if(sending_frag.contentEquals("companyMainMenu")) {
+                    param.put("username", userName);
+                }else{
+                    param.put("username", user_login_id);
+                }
+                param.put("ssid",session_id);
+                return param;
+            }
+        };
+        Vconnection.getnInstance(activity).addRequestQue(stringRequest); // vConnection i claas which used to connect volley
+
+    }
+
+    public Context getContextNullSafety() {
+
+        if (getContext() != null) return getContext();
+        if (getActivity() != null) return getActivity();
+        if (contextNullSafe != null) return contextNullSafe;
+        if (getView() != null && getView().getContext() != null) return getView().getContext();
+        if (requireContext() != null) return requireContext();
+        if (requireActivity() != null) return requireActivity();
+        if (requireView() != null && requireView().getContext() != null)
+            return requireView().getContext();
+
+        return null;
+
+    }
+
+    /**CALL THIS IF YOU NEED ACTIVITY*/
+    public FragmentActivity getActivityNullSafety() {
+
+        if (getContextNullSafety() != null && getContextNullSafety() instanceof FragmentActivity) {
+            /*It is observed that if context it not null then it will be
+             * the related host/container activity always*/
+            return (FragmentActivity) getContextNullSafety();
+        }
+        return null;
+    }
+}

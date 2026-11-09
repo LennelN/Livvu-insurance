@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+
+
+        <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="370dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="@string/online_users_registration_form"
+                />
+
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:inputType="textCapWords"
+                android:textSize="16sp"
+                android:textColorHint="@color/colorBlack"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:hint="@string/full_name"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="textCapWords"
+                android:layout_below="@id/etName"
+                android:textSize="16sp"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:hint="@string/physical_address"
+                android:layout_alignParentLeft="true" />
+
+
+            <EditText
+                android:id="@+id/etEmailAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp"
+                android:layout_below="@id/etAddress"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:hint="@string/email_address"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etIDNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="textCapWords"
+                android:textSize="16sp"
+                android:layout_below="@id/etEmailAddress"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:hint="@string/enter_id"
+                android:layout_alignParentLeft="true" />
+
+
+            <TextView
+                android:id="@+id/role_id"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/user_role"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_below="@id/etIDNo"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:layout_below="@id/etIDNo"
+                android:nextFocusDown="@id/etPhoneNumber"
+                android:id="@+id/radio"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="5dp">
+
+
+                <RadioButton
+                    android:id="@+id/admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/colorBlack"
+                    android:buttonTint="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textColorLink="@color/colorBlack"
+                    android:focusable="true"
+                    android:checked="true"
+                    android:textSize="16sp"
+                    android:nextFocusDown="@id/etPhoneNumber"
+                    android:text="@string/admin"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp" />
+
+                <RadioButton
+                    android:id="@+id/accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/colorBlack"
+                    android:buttonTint="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textColorLink="@color/colorBlack"
+                    android:focusable="true"
+                    android:textSize="16sp"
+                    android:nextFocusDown="@id/etPhoneNumber"
+                    android:text="@string/accounts"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp" />
+
+                <RadioButton
+                    android:id="@+id/livvu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/colorBlack"
+                    android:buttonTint="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textColorLink="@color/colorBlack"
+                    android:focusable="true"
+                    android:textSize="16sp"
+                    android:nextFocusDown="@id/etPhoneNumber"
+                    android:text="@string/livvu"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/role_id"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:hint="@string/phone_number"
+                android:layout_alignParentLeft="true" />
+
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textColorHint="@color/colorBlack"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:text="@string/user_reg_password"
+                android:layout_below="@id/etPhoneNumber"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:enabled="false"
+                android:hint="@string/password_hint"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:inputType="number"
+                android:layout_below="@id/etPassword"
+                android:imeOptions="actionNext"
+                android:orientation="horizontal"
+                android:enabled="false"
+                android:textSize="16sp"
+                android:text="@string/user_reg_password"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:nextFocusDown="@id/country_Name"
+                android:hint="@string/confirm_password"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etBranch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="textCapWords"
+                android:layout_below="@id/etConfirmPassword"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:hint="@string/enter_user_branch"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etCountry"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="textCapCharacters"
+                android:layout_below="@id/etBranch"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:hint="@string/enter_user_country"
+                android:layout_alignParentLeft="true" />
+
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCountry"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="180dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:text="@string/cancel"
+                 />
+
+            <TextView
+                android:id="@+id/tvRegisterHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCountry"
+                android:layout_marginStart="440dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:enabled="false"
+                android:text="@string/register"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/colorCell"
+                android:textSize="16sp"
+                />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

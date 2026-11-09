@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/criteria"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/enter_tariff_code_for_report"
+                    android:padding="10dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:backgroundTint="@color/colorBlack"
+                    android:inputType="number"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:id="@+id/edtUserName"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_start_date_report"
+                        android:id="@+id/etStartDate"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:textSize="16sp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/to"
+                        android:id="@+id/textView1"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/enter_end_date_report"
+                        android:id="@+id/etEndDate"
+                        android:paddingRight="0dp"
+                        android:paddingLeft="0dp"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="50dp"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="50dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/rounded_button"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/action_cancel"
+                       />
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ok"
+                        android:textAlignment="center"
+                        android:background="@drawable/rounded_button"
+                        android:layout_marginTop="50dp"
+                        android:textSize="16sp"
+                        android:layout_marginStart="70dp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginBottom="50dp"
+                        android:id="@+id/action_ok"
+                         />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="@color/colorCell"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:text="@string/total"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:padding="0dp"
+            android:id="@+id/total"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:text="@string/days120"
+            android:textSize="12sp"
+            android:layout_below="@id/total"
+            android:padding="0dp"
+            android:id="@+id/tv120days"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:text="@string/days90"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:layout_below="@id/total"
+            android:padding="0dp"
+            android:id="@+id/tv90days"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="80dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:text="@string/days60"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:layout_below="@id/total"
+            android:padding="0dp"
+            android:id="@+id/tv60days"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="140dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:text="@string/days30"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:layout_below="@id/total"
+            android:padding="0dp"
+            android:id="@+id/tv30days"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="200dp" />
+
+
+        <TextView
+            android:id="@+id/current"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total"
+            android:layout_marginStart="260dp"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="0dp"
+            android:padding="0dp"
+            android:text="@string/owing"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="215dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:id="@+id/footer_debit"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="215dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="275dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:textAlignment="center"
+            android:id="@+id/footer_credit"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="275dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_below="@id/tv120days"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:id="@+id/footer_balance_120days"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_below="@id/tv120days"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:id="@+id/footer_balance_90days"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="95dp" />
+
+        <TextView
+            android:id="@+id/footer_balance_60days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv120days"
+            android:layout_marginStart="155dp"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="155dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="215dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_below="@id/tv120days"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:id="@+id/footer_balance_30days"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="215dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="275dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_below="@id/tv120days"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:id="@+id/footer_balance"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="275dp" />
+
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="fill_parent"
+            android:layout_below="@id/footer_balance"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:background="@color/colorGreen"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:text="@string/cancel"
+            android:layout_marginLeft="0dp" />
+
+    </RelativeLayout>
+</LinearLayout>

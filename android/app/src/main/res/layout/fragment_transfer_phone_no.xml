@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="12dp"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:layout_centerHorizontal="true"
+                />
+
+            <EditText
+                android:id="@+id/etMenuChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWelcomeMsg"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:textColorHint="@color/colorBlack"
+                android:ems="20"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvSelectCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/etMenuChoice"
+                android:layout_marginTop="20dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:text="@string/select_country"
+                />
+
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/country_Name"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/colorBlack"
+                android:spinnerMode="dropdown"
+                android:layout_below="@id/tvSelectCountry"
+
+                />
+
+
+
+            <TextView
+                android:id="@+id/tvSendHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/country_Name"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="125dp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="12sp"
+                android:textColor="@color/colorCell"
+                android:layout_marginBottom="20dp"
+                android:enabled="false"
+                android:text="@string/send" />
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/country_Name"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="12sp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="normal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/cancel" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+    </FrameLayout>
+</RelativeLayout>

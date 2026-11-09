@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="@color/colorCell"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="@string/date"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="40dp"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="40dp" />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="@string/phone"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="80dp"
+        android:padding="3dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="110dp"
+        android:layout_marginRight="80dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/tvTotalPriceHeader"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="190dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/bill_no"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="190dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/tvNoOfPoints"
+        android:padding="3dp"
+        android:layout_marginStart="260dp"
+        android:text="@string/points"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginLeft="260dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/tvNoOfDays"
+            android:padding="3dp"
+            android:layout_marginStart="310dp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/no_of_days"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="310dp" />
+
+
+    </RelativeLayout>
+</LinearLayout>

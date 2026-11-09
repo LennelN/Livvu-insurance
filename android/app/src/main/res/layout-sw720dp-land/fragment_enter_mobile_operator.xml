@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="100dp"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="50dp"
+            android:background="@color/colorWhite"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="80dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="@string/enter_mobile_operator_form"
+                 />
+
+
+            <EditText
+                android:id="@+id/etNameOfMobileOperator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="50dp"
+                android:textSize="30sp"
+                android:inputType="textCapWords"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:textColorHint="@color/colorBlack"
+                android:hint="@string/enter_name_of_mobile_operator"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etPhoneNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="phone"
+                android:textSize="30sp"
+                android:layout_below="@id/etNameOfMobileOperator"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:hint="@string/enter_contact_phone_number"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etPhysicalAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="textCapWords"
+                android:textSize="30sp"
+                android:layout_below="@id/etPhoneNo"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="20dp"
+                android:hint="@string/enter_physical_address_of_operator"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/select_country"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/select_country"
+                android:textColor="@color/colorBlack"
+                android:layout_below="@id/etPhysicalAddress"
+                android:layout_marginTop="30dp"
+                android:textSize="30sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/country_Name"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="@color/colorBlack"
+                android:spinnerMode="dropdown"
+                android:layout_below="@id/etPhysicalAddress"
+                android:layout_toEndOf="@id/select_country"
+                android:layout_marginLeft="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/select_country" />
+
+
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/country_Name"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginStart="220dp"
+                android:textSize="30sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal"
+                android:text="@string/cancel"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:layout_marginLeft="220dp" />
+
+            <TextView
+                android:id="@+id/tvSendHere"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/country_Name"
+                android:layout_marginStart="620dp"
+                android:layout_marginTop="50dp"
+                android:enabled="false"
+                android:text="@string/send"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="50dp"
+                android:textColor="@color/colorCell"
+                android:textSize="30sp"
+                android:layout_marginLeft="620dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

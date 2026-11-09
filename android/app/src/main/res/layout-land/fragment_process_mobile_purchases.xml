@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorWhite">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvWelcomeMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="12dp"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:text="@string/process_mobile_operator_purchases"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tvCashOutTransNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_below="@id/tvWelcomeMsg"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_centerHorizontal="true"
+                    />
+
+
+                <EditText
+                    android:id="@+id/etTransactionNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCashOutTransNo"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="normal"
+                    android:hint="@string/enter_transaction_number"
+                    android:backgroundTint="@color/colorBlack"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:inputType="textCapWords" />
+
+
+                <EditText
+                    android:id="@+id/etTransactionType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:textColorHint="@color/colorBlack"
+                    android:textColor="@color/colorBlack"
+                    android:backgroundTint="@color/colorBlack"
+                    android:layout_marginTop="10dp"
+                    android:textSize="12sp"
+                    android:layout_below="@id/etTransactionNo"
+                    android:inputType="textCapWords"
+                    android:hint="@string/enter_transaction_type"
+                    android:layout_alignParentLeft="true" />
+
+                <EditText
+                    android:id="@+id/etTransactionAmt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:inputType="numberDecimal"
+                    android:layout_below="@id/etTransactionType"
+                    android:imeOptions="actionNext"
+                    android:textSize="12sp"
+                    android:orientation="horizontal"
+                    android:textColor="@color/colorBlack"
+                    android:backgroundTint="@color/colorBlack"
+                    android:nextFocusDown="@id/country_Name"
+                    android:hint="@string/enter_transaction_amount"
+                    android:layout_alignParentLeft="true" />
+
+                <EditText
+                    android:id="@+id/etTransactionDate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:inputType="date"
+                    android:textSize="12sp"
+                    android:layout_below="@id/etTransactionAmt"
+                    android:imeOptions="actionNext"
+                    android:orientation="horizontal"
+                    android:longClickable="false"
+                    android:focusable="false"
+                    android:textColor="@color/colorBlack"
+                    android:backgroundTint="@color/colorBlack"
+                    android:nextFocusDown="@id/country_Name"
+                    android:hint="@string/enter_transaction_date"
+                    android:layout_alignParentLeft="true" />
+
+
+                <TextView
+                    android:id="@+id/tvSendHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etTransactionDate"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="190dp"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginBottom="20dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorCell"
+                    android:enabled="false"
+                    android:text="@string/send" />
+
+                <TextView
+                    android:id="@+id/tvCancelHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etTransactionDate"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/cancel" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+</RelativeLayout>

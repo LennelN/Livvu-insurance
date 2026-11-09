@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sPurchaseDate"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:text="@string/date"
+            android:layout_marginStart="0dp"
+            android:padding="3dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+             />
+
+        <TextView
+            android:id = "@+id/sTransactionType"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:text="@string/type"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+            android:padding="3dp"
+            android:layout_marginStart="300dp"
+             />
+
+        <TextView
+            android:id="@+id/sTransactionNo"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="600dp"
+            android:padding="3dp"
+            android:text="@string/ph_no"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/sAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="960dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/debit"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

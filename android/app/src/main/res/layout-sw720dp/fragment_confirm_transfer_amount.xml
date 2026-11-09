@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="50dp"
+    android:background="@color/colorGreen"
+    android:gravity="center">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="20dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/colorWhite"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorBlack"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="50dp"
+                android:textSize="30sp"
+                android:textStyle="normal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/confirm_yes"
+                />
+
+            <TextView
+                android:id="@+id/tvDecline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/tvConfirm"
+                android:textSize="30sp"
+                android:textStyle="normal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/decline"
+                />
+
+
+            <EditText
+                android:id="@+id/etMenuChoice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:layout_below="@id/tvDecline"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="30dp"
+                android:ems="20"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+
+
+                <TextView
+                    android:id="@+id/tvCancelHere"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_below="@id/etMenuChoice"
+                    android:layout_marginTop="50dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:text="@string/cancel"
+                    android:layout_marginBottom="50dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="30sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvSendHere"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etMenuChoice"
+                    android:layout_marginStart="420dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/rounded_button"
+                    android:layout_marginBottom="50dp"
+                    android:enabled="false"
+                    android:text="@string/send"
+                    android:textColor="@color/colorCell"
+                    android:textSize="30sp" />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

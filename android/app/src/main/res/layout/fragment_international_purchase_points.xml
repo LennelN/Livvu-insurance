@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    >
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="@string/purchase_points_form"
+                android:textColor="@color/colorBlack"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"/>
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:textStyle="normal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/_1_debit_card"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/textView"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/_2_paypal"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/textView1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/pay_credit_card"
+                android:layout_marginLeft="10dp" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/textView2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:textColor="@color/colorBlack"
+                android:text="@string/_4_paynow_international"
+                android:layout_marginLeft="10dp" />
+
+
+            <EditText
+                android:id="@+id/etMenuChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="15dp"
+                android:ems="20"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvSendHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etMenuChoice"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="125dp"
+                android:layout_marginLeft="125dp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="12sp"
+                android:textColor="@color/colorCell"
+                android:enabled="false"
+                android:text="@string/send" />
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etMenuChoice"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal"
+                android:text="@string/cancel" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

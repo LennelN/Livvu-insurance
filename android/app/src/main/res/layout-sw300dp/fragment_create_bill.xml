@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/frag_create_bill_portrait"
+    tools:context=".CreateBillFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvWelcomeMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/create_capture_bill"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDoctorPhone"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvWelcomeMsg"
+            android:layout_marginTop="20dp"
+            android:text="@string/select_doctor_phone_no"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/etDoctorPhone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/tvWelcomeMsg"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/tvDoctorPhone"
+            android:backgroundTint="@color/colorBlack"
+            android:spinnerMode="dropdown" />
+
+
+        <TextView
+            android:id="@+id/tvDoctorName"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDoctorPhone"
+            android:layout_marginTop="20dp"
+            android:text="@string/doctor_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/etDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDoctorPhone"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tvDoctorName"
+            android:backgroundTint="@color/colorBlack"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="textCapWords"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvPatientNo"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etDoctor"
+            android:layout_marginTop="20dp"
+            android:text="@string/enter_phone_number_billing"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etDoctor"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tvPatientNo"
+            android:backgroundTint="@color/colorBlack"
+            android:gravity="center"
+            android:inputType="phone"
+            android:importantForAutofill="no"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/search_bill"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etDoctor"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/etPhone"
+            android:background="@drawable/rounded_button"
+            android:text="@string/search_details"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+
+
+        <TextView
+            android:id="@+id/tvSelectCountry"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPhone"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="40dp"
+            android:text="@string/select_country"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <Spinner
+            android:id="@+id/country_Name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/etPhone"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tvSelectCountry"
+            android:backgroundTint="@color/colorBlack"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/tvPatientName"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/country_Name"
+            android:layout_marginTop="20dp"
+            android:text="@string/patient_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/etPatientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/country_Name"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tvPatientName"
+            android:backgroundTint="@color/colorBlack"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="textCapWords"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tvPatientBalance"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPatientName"
+            android:layout_marginTop="20dp"
+            android:text="@string/patient_balance"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/etPatientBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPatientName"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tvPatientName"
+            android:backgroundTint="@color/colorBlack"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvPatientBillNo"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPatientBalance"
+            android:layout_marginTop="20dp"
+            android:text="@string/patient_bill_no"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/etPatientBillNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPatientBalance"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tvPatientBillNo"
+            android:backgroundTint="@color/colorBlack"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="textCapCharacters"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPatientBillNo"
+            android:layout_marginTop="35dp"
+            android:text="@string/tariff_code"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/Code"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/etPatientBillNo"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/tvCountry"
+            android:backgroundTint="@color/colorBlack"
+            android:spinnerMode="dropdown" />
+
+
+
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Code"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/colorBlack"
+            android:text="@string/enter_quantity"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/etQuantity"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Code"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@id/tvQuantity"
+            android:backgroundTint="@color/colorBlack"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/add_bill"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Code"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/etQuantity"
+            android:background="@drawable/rounded_button"
+            android:text="@string/add_tariff"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvQuantity"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/colorBlack"
+            android:text="@string/total_bill"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/etTotal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvQuantity"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@id/tvTotal"
+            android:backgroundTint="@color/colorBlack"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/create_bill"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvQuantity"
+            android:layout_marginTop="25dp"
+            android:layout_toEndOf="@id/etTotal"
+            android:background="@drawable/rounded_button"
+            android:text="@string/create_bill_btn"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTotal"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:text="@string/view_bill_items" />
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnView"
+            android:layout_marginTop="0dp"
+            android:textSize="16sp"
+            android:text="@string/cancel" />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_below="@id/btnCancel"
+            android:cacheColorHint="@color/colorBlack"
+            android:choiceMode="multipleChoice"
+            android:divider="@null"
+            />
+
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

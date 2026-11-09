@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    android:id="@+id/activity_main_frag_landscape"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0dp"
+        android:background="@color/colorWhite"
+        android:layout_marginLeft="0dp">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvWelcomeMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="40dp"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/welcome_to_phila"
+                     />
+
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="100dp"
+                    android:textColorHint="@color/colorBlack"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:backgroundTint="@color/colorBlack"
+                    android:inputType="phone"
+                    android:hint="@string/phone_number"
+                    android:layout_alignParentLeft="true" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:maxLength="4"
+                    android:hint="@string/password"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_below="@id/etPhoneNumber"
+                    android:inputType="numberPassword"
+                    android:textColorHint="@color/colorBlack"
+                    android:textColor="@color/colorBlack"
+                    android:backgroundTint="@color/colorBlack"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/select_country"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/select_country"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@id/etPassword"
+                    android:layout_marginTop="40dp"
+                    android:textSize="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:id="@+id/country_Name"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/colorBlack"
+                    android:spinnerMode="dropdown"
+                    android:layout_below="@id/etPassword"
+                    android:layout_toEndOf="@id/select_country"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tvLoginHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/country_Name"
+                    android:layout_marginStart="640dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:enabled="false"
+                    android:textColor="@color/colorCell"
+                    android:text="@string/login"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="600dp" />
+
+                <TextView
+                    android:id="@+id/tvRegisterHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/country_Name"
+                    android:layout_marginStart="440dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/register"
+                    android:layout_marginBottom="30dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:textStyle="normal"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="400dp" />
+
+                <TextView
+                    android:id="@+id/tvCancelHere"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:background="@drawable/rounded_button"
+                    android:layout_below="@+id/country_Name"
+                    android:layout_marginStart="260dp"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="30dp"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/cancel"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="220dp" />
+
+                <TextView
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/colorPurple"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/tvCancelHere"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreen"
+        >
+
+        <TextView
+            android:layout_column="0"
+            android:layout_span="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:text="@string/code"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_column="1"
+            android:layout_span="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:text="@string/description"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_column="2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:text="@string/price"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:layout_column="3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:text="@string/category"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_column="4"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:text="@string/type"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+    </TableRow>
+
+
+</TableLayout>

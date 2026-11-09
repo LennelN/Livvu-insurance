@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="320dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="@string/capture_patient_details"
+                />
+
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:layout_below="@id/tvWelcomeMsg"
+                android:inputType="phone"
+                android:textColorHint="@color/colorBlack"
+                android:hint="@string/enter_phone_number"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/tvSelectCountry"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/etPhoneNumber"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:text="@string/select_country"
+                />
+
+
+            <Spinner
+                android:id="@+id/country_Name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/etPhoneNumber"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/tvSelectCountry"
+                android:backgroundTint="@color/colorBlack"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/etBodyTemperature"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="numberDecimal"
+                android:layout_below="@id/country_Name"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:hint="@string/enter_body_temperature"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etBloodPressure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:inputType="textCapWords"
+                android:layout_below="@id/etBodyTemperature"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:hint="@string/enter_blood_pressure"
+                android:layout_alignParentLeft="true" />
+
+
+            <EditText
+                android:id="@+id/etBodyPulse"
+                android:layout_width="fill_parent"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etBloodPressure"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="textCapWords"
+                android:hint="@string/enter_body_pulse"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etAllergies"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etBodyPulse"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="textCapWords"
+                android:hint="@string/enter_known_allergies"
+                android:layout_alignParentLeft="true" />
+
+
+            <EditText
+                android:id="@+id/etBloodType"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etAllergies"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="textCapWords"
+                android:hint="@string/enter_blood_type"
+                android:layout_alignParentLeft="true" />
+
+
+            <EditText
+                android:id="@+id/etOtherDetails"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etBloodType"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="textCapWords"
+                android:hint="@string/enter_other_details"
+                android:layout_alignParentLeft="true" />
+
+
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etOtherDetails"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="100dp"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal"
+                android:text="@string/cancel"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                 />
+
+            <TextView
+                android:id="@+id/tvSendHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etOtherDetails"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="15dp"
+                android:enabled="false"
+                android:text="@string/send"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/colorCell"
+                android:textSize="16sp"
+                />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

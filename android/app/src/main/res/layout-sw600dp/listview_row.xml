@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+
+        <TextView
+            android:id = "@+id/code"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="start"
+            android:text="code"
+            android:textColor="@color/colorBlack"
+            android:padding="0dp"
+            android:layout_marginStart="0dp"
+            />
+
+        <TextView
+            android:id = "@+id/sNo"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="100dp"
+            android:padding="0dp"
+            android:text="no"
+            android:gravity="start"
+            android:textSize="20sp"
+            />
+
+
+        <TextView
+            android:id = "@+id/Description"
+            android:layout_width = "180dp"
+            android:layout_height = "wrap_content"
+            android:padding="0dp"
+            android:text="desc"
+            android:textSize="20sp"
+            android:gravity="start"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="160dp"
+            />
+
+        <TextView
+            android:id = "@+id/price"
+            android:layout_width = "100dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart="340dp"
+            android:textColor="@color/colorBlack"
+            android:padding="0dp"
+            android:gravity="start"
+            android:text="price"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id = "@+id/totalPrice"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:padding="0dp"
+            android:layout_marginStart="440dp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/total"
+            android:gravity="start"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

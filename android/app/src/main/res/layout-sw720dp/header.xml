@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreen"
+        >
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_span="1"
+            android:gravity="start"
+            android:padding="10dp"
+            android:textSize="30sp"
+            android:text="@string/date"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_column="1"
+            android:layout_span="1"
+            android:gravity="start"
+            android:padding="10dp"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:text="@string/phone"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_column="2"
+            android:padding="10dp"
+            android:gravity="start"
+            android:text="@string/bill_no"
+            android:textSize="30sp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_column="3"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:textSize="30sp"
+            android:padding="10dp"
+            android:text="@string/points"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_column="4"
+            android:padding="10dp"
+            android:textSize="30sp"
+            android:gravity="start"
+            android:layout_gravity="center"
+            android:text="@string/no_of_days"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+    </TableRow>
+
+
+</TableLayout>

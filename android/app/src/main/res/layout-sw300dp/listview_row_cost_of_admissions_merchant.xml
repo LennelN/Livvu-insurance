@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+    <TextView
+        android:id = "@+id/sCode"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:padding="2dp"
+        android:textSize="16sp"
+         />
+
+
+        <TextView
+            android:id = "@+id/sPhoneNo"
+            android:layout_width = "100dp"
+            android:layout_height = "match_parent"
+            android:padding="2dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:text="@string/phone"
+            android:textSize="16sp"
+             />
+
+
+        <TextView
+        android:id = "@+id/sAmount"
+        android:layout_width = "80dp"
+        android:layout_height = "match_parent"
+        android:padding="1dp"
+        android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+        android:layout_marginStart="160dp"
+            android:layout_marginLeft="160dp"
+        android:text="@string/points"
+        android:textSize="16sp"
+             />
+
+        <TextView
+            android:id = "@+id/sCount"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:gravity="center_horizontal"
+            android:padding="1dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="240dp"
+            android:layout_marginLeft="240dp"
+            android:text="@string/no_of_days"
+            android:textSize="16sp"
+             />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

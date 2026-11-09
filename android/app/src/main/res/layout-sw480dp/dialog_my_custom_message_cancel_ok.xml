@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/colorGreen"
+    >
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_text"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:text="@string/confirm_before_purchase"
+                android:layout_marginTop="0dp"
+
+                 />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/message_text"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:layout_below="@id/title_text"
+                android:layout_marginTop="20dp"
+
+                />
+
+
+
+            <TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/confirm"
+                android:layout_marginTop="40dp"
+				android:textSize="18sp"
+				android:textColor="@color/colorBlack"
+                android:layout_below="@id/message_text"
+				android:id="@+id/action_ok"
+                android:textStyle="bold"
+                android:layout_marginStart="260dp"
+                android:layout_marginLeft="260dp"
+
+                 />
+
+        
+	
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/cancel_uppercase"
+                android:layout_below="@id/message_text"
+				android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+				android:textSize="18sp"
+                android:textStyle="bold"
+				android:textColor="@color/colorBlack"
+				android:id="@+id/action_cancel"
+                 />
+
+    
+		</RelativeLayout>
+
+
+</ScrollView>
+
+</RelativeLayout>

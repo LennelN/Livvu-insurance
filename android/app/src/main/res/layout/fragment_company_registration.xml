@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvWelcomeMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                android:text="@string/welcome_to_phila_registration_form"
+                />
+
+
+            <EditText
+                android:id="@+id/etName"
+                android:textColorHint="@color/colorBlack"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="60dp"
+                android:inputType="textCapWords"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:hint="@string/name"
+                android:textSize="12sp"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etLicenceNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="textCapWords"
+                android:layout_below="@id/etName"
+                android:layout_marginTop="10dp"
+                android:hint="@string/merchant_licence_number"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentLeft="true"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etLicenceNo"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:orientation="horizontal"
+                android:nextFocusDown="@id/merchant_desc"
+                android:hint="@string/merchant_address"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentLeft="true"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/etDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/merchant_description2"
+                android:layout_below="@id/etAddress"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/merchant_desc"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:backgroundTint="@color/colorBlack"
+                android:focusableInTouchMode="true"
+                android:nextFocusDown="@id/sector_desc"
+                android:spinnerMode="dropdown"
+                android:layout_below="@id/etAddress"
+                android:layout_toEndOf="@id/etDescription"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/etDescription" />
+
+
+            <TextView
+                android:id="@+id/etSector"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/merchant_sector"
+                android:layout_below="@id/etDescription"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/sector_desc"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:focusable="true"
+                android:imeOptions="actionNext"
+                android:backgroundTint="@color/colorBlack"
+                android:focusableInTouchMode="true"
+                android:nextFocusDown="@id/etPhoneNumber"
+                android:spinnerMode="dropdown"
+                android:layout_below="@id/etDescription"
+                android:layout_toEndOf="@id/etSector"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/etSector" />
+
+
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/sector_desc"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:inputType="phone"
+                android:textSize="12sp"
+                android:hint="@string/phone_number"
+                android:importantForAutofill="no"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentLeft="true" />
+
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/etPhoneNumber"
+                android:textColorHint="@color/colorBlack"
+                android:layout_marginTop="10dp"
+                android:inputType="numberPassword"
+                android:hint="@string/password_hint"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentLeft="true" />
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/etPassword"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="numberPassword"
+                android:imeOptions="actionNext"
+                android:textSize="12sp"
+                android:orientation="horizontal"
+                android:nextFocusDown="@id/country_Name"
+                android:hint="@string/confirm_password"
+                android:textColor="@color/colorBlack"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/select_country"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/select_country2"
+                android:layout_below="@id/etConfirmPassword"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/country_Name"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:spinnerMode="dropdown"
+                android:backgroundTint="@color/colorBlack"
+                android:layout_below="@id/etConfirmPassword"
+                android:layout_toEndOf="@id/select_country"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/select_country" />
+
+            <TextView
+                android:id="@+id/etRegion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/country_Name"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:text="@string/merchant_region2"
+                android:layout_alignParentLeft="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/region_desc"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentEnd="true"
+                android:spinnerMode="dropdown"
+                android:backgroundTint="@color/colorBlack"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusDown="@id/etPhoneNumber"
+                android:layout_below="@id/country_Name"
+                android:layout_toEndOf="@id/etRegion"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/etRegion" />
+
+
+            <TextView
+                android:id="@+id/tvCancelHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/region_desc"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="20dp"
+                android:textStyle="normal"
+                android:text="@string/cancel"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/tvRegisterHere"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/region_desc"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="12sp"
+                android:enabled="false"
+                android:textAlignment="center"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/colorCell"
+                android:text="@string/register"
+                android:layout_marginLeft="125dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

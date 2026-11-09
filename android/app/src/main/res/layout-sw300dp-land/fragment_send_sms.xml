@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorGreen"
+    android:layout_gravity="center"
+    android:padding="30dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/smsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="@string/send_sms"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp" />
+
+
+        <TextView
+            android:id="@+id/fstTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/enter_phone_number"
+            android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/mblTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/colorBlack"
+            android:textColor="@color/colorBlack"
+            android:ems="10"
+            android:inputType="phone"
+            android:gravity="center"
+            android:importantForAutofill="no"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/secTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_your_message"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp" />
+
+        <EditText
+            android:id="@+id/msgTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:gravity="top"
+            android:textColor="@color/colorBlack"
+            android:height="100dp"
+            android:textSize="16sp"
+            android:backgroundTint="@color/colorBlack"
+            android:layout_marginStart="10dp" /><requestFocus/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:id="@+id/textView1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/colorBlack"
+                android:text="@string/foward_slash"
+                android:textSize="16sp"
+                android:id="@+id/textView2"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:inputType="number"
+                android:id="@+id/textView3"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginStart="250dp"
+                android:textColor="@color/colorBlack"
+                android:id="@+id/textView4"
+                android:textSize="16sp"
+                android:layout_marginLeft="250dp" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/rounded_button"
+            android:layout_marginLeft="100dp"
+            android:text="@string/cancel"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="100dp" />
+
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_button"
+        android:layout_marginLeft="120dp"
+        android:text="@string/send_sms"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="120dp" />
+
+
+
+</LinearLayout>
+    </LinearLayout>
+        </androidx.cardview.widget.CardView>
+   </ScrollView>
+</LinearLayout>

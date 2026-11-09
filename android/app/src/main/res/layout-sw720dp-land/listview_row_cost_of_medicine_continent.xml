@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sRegion"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:padding="1dp"
+            android:textSize="30sp"
+            android:layout_marginLeft="0dp"
+            />
+
+        <TextView
+            android:id = "@+id/sCountry"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="250dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:padding="1dp"
+            android:textSize="30sp"
+            android:layout_marginLeft="250dp"
+            />
+
+
+
+
+        <TextView
+            android:id = "@+id/sPointsPaid"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="500dp"
+            android:padding="1dp"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="500dp"
+            />
+
+
+        <TextView
+            android:id = "@+id/sPointsCashed"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="750dp"
+            android:padding="1dp"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="750dp"
+            />
+
+        <TextView
+            android:id = "@+id/sBalance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="1000dp"
+            android:padding="1dp"
+            android:textSize="30sp"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="1000dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

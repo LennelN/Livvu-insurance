@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sDateJoined"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:text="@string/date"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:padding="3dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+             />
+
+        <TextView
+            android:id = "@+id/sDoctorName"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:text="@string/type"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:padding="3dp"
+            android:layout_marginStart="300dp"
+             />
+
+        <TextView
+            android:id = "@+id/sDoctorPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/ph_no"
+            android:layout_marginStart="600dp"
+            android:textColor="@color/colorBlack"
+            android:padding="3dp"
+            android:textSize="16sp"
+             />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

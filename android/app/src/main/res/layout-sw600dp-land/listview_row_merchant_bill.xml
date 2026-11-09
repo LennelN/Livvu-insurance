@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+    <TextView
+        android:id = "@+id/sBillDate"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:padding="3dp"
+        android:text="@string/date"
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id = "@+id/sMerchantName"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="220dp"
+        android:textColor="@color/colorBlack"
+        android:padding="3dp"
+        android:textSize="20sp"
+        android:text="@string/phone"
+        android:layout_marginLeft="220dp"
+         />
+
+
+        <TextView
+            android:id = "@+id/totalPrice"
+            android:layout_width = "200dp"
+            android:layout_height = "match_parent"
+            android:layout_marginStart="420dp"
+            android:textColor="@color/colorBlack"
+            android:padding="3dp"
+            android:text="@string/bill_no"
+            android:textSize="20sp"
+            android:layout_marginLeft="420dp" />
+
+    <TextView
+        android:id = "@+id/noOfPoints"
+        android:layout_width = "200dp"
+        android:layout_height = "match_parent"
+        android:padding="5dp"
+        android:layout_marginStart="640dp"
+        android:textColor="@color/colorBlack"
+        android:text="@string/points"
+        android:textSize="20sp"
+        android:layout_marginLeft="640dp" />
+
+        <TextView
+            android:id = "@+id/noOfDays"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:padding="10dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="840dp"
+            android:text="@string/no_of_days"
+            android:textSize="20sp"
+            android:layout_marginLeft="840dp"
+             />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

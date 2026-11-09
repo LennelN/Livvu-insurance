@@ -1,0 +1,25 @@
+# Secrets - never commit
+server/**/db_config.php
+.env
+*.env
+*.jks
+*.keystore
+google-services.json
+local.properties
+
+# Android build output
+.gradle/
+build/
+android/app/build/
+captures/
+*.apk
+*.aab
+.idea/
+*.iml
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+server/**/db_config*.php
+!server/**/db_config.example.php

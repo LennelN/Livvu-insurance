@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+    <TextView
+        android:id = "@+id/sBillDate"
+        android:layout_width="110dp"
+        android:layout_height="match_parent"
+        android:text="@string/righhh"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:padding="3dp"
+        android:textSize="16sp"
+         />
+
+
+        <TextView
+            android:id = "@+id/sTransactionNo"
+            android:layout_width = "100dp"
+            android:layout_height = "match_parent"
+            android:padding="3dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="110dp"
+            android:layout_marginLeft="100dp"
+            android:text="@string/trans_no"
+            android:textSize="16sp"
+             />
+
+
+        <TextView
+        android:id = "@+id/noOfPoints"
+        android:layout_width = "80dp"
+        android:layout_height = "match_parent"
+        android:padding="3dp"
+        android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+        android:layout_marginStart="210dp"
+            android:layout_marginLeft="200dp"
+        android:text="@string/points"
+        android:textSize="16sp"
+             />
+
+        <TextView
+            android:id = "@+id/noOfDays"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="290dp"
+            android:layout_marginLeft="280dp"
+            android:text="@string/no_of_days"
+            android:textSize="16sp"
+             />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

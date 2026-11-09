@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen"
+    >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_text"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:text="@string/bill_items_list"
+                android:layout_marginTop="10dp"
+
+                 />
+
+
+
+            <LinearLayout
+                android:id="@+id/ly_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_text"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <include layout="@layout/listview_header" />
+
+
+
+            </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_header"
+        android:layout_marginTop="0dp"
+        android:padding="3dp"
+        android:divider="@color/colorBlack"
+        android:dividerHeight="1dp"
+        />
+
+
+
+
+</RelativeLayout>

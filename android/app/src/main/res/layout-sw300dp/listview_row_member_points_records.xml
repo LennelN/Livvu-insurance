@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sPurchaseDate"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:text="@string/date"
+            android:layout_marginStart="0dp"
+            android:padding="1dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:id = "@+id/sTransactionType"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="@string/type"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:padding="1dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="70dp" />
+
+        <TextView
+            android:id = "@+id/sTransactionNo"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:text="@string/ph_no"
+            android:layout_marginStart="130dp"
+            android:textColor="@color/colorBlack"
+            android:padding="2dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="130dp" />
+
+
+        <TextView
+            android:id = "@+id/sAmount"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart="240dp"
+            android:padding="2dp"
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:text="@string/debit"
+            android:layout_marginLeft="190dp" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

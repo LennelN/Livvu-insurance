@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/colorWhite">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative1">
+
+        <TextView
+            android:id = "@+id/sBillDate"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:text="@string/date"
+            android:layout_marginStart="0dp"
+            android:padding="1dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="0dp" />
+
+        <TextView
+            android:id = "@+id/sPhoneNo"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="@string/type"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"
+            android:padding="1dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp" />
+
+        <TextView
+            android:id = "@+id/sBillNo"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="@string/bill_no"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="240dp"
+            android:textColor="@color/colorBlack"
+            android:padding="2dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="240dp" />
+
+
+        <TextView
+            android:id = "@+id/sName"
+            android:layout_width = "150dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart="370dp"
+            android:padding="2dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            android:text="@string/debit"
+            android:layout_marginLeft="370dp" />
+
+        <TextView
+            android:id = "@+id/sPaid"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:padding="3dp"
+            android:layout_marginStart="520dp"
+            android:textColor="@color/colorBlack"
+            android:hint="@string/credit"
+            android:textSize="20sp"
+            android:layout_marginLeft="520dp" />
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreen"
+    android:padding="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/please_select"
+                    android:textColor="#000"
+                    android:id="@+id/heading"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/moodRadioGroup"
+                    android:padding="0dp">
+
+                    <RadioButton
+                        android:text="@string/full_report"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioButton1"
+                        android:textColor="@color/colorBlack"
+                        android:buttonTint="@color/colorBlack"
+                        android:checked="true"
+                        android:padding="1dp"
+                        android:textSize="12sp"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="@string/report_by_date_range"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/radioButton2"
+                        android:padding="1dp"
+                        android:textSize="12sp"
+                        android:buttonTint="@color/colorBlack"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="@string/report_by_phone_number"
+                        android:layout_width="wrap_content"
+                        android:padding="1dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/radioButton3"
+                        android:textSize="12sp"
+                        android:buttonTint="@color/colorBlack"
+                        android:layout_weight="1" />
+
+
+                    <RadioButton
+                        android:text="@string/report_by_phone_number_date_range"
+                        android:layout_width="wrap_content"
+                        android:padding="1dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/radioButton4"
+                        android:textSize="12sp"
+                        android:buttonTint="@color/colorBlack"
+                        android:layout_weight="1" />
+
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/rounded_button"
+                        android:textColor="@color/colorBlack"
+                        android:id="@+id/action_cancel"
+                        android:layout_marginLeft="30dp" />
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ok"
+                        android:textAlignment="center"
+                        android:background="@drawable/rounded_button"
+                        android:layout_marginTop="10dp"
+                        android:textSize="12sp"
+                        android:layout_marginStart="60dp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginBottom="5dp"
+                        android:id="@+id/action_ok"
+                        android:layout_marginLeft="60dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
